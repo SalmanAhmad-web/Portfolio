@@ -212,28 +212,94 @@ header {
     width: 143px;
     height: 30px;
 }
-
 .sicon {
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
-.icon {
+.sicon .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
-    width: 40px;
-    height: 40px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
     cursor: pointer;
-    border-radius: 50%;
+    transition: 0.3s;
 }
 
-.icon i {
-    font-size: 22px;
+.sicon .icon a {
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.sicon .icon i {
+    font-size: 20px;
+}
+
+/* Tooltip */
+.sicon .tooltip {
+    position: absolute;
+    top: 0;
+    background: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.sicon .tooltip::before {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+/* Hover effect */
+.sicon .icon:hover .tooltip {
+    top: -40px;
+    opacity: 1;
+}
+
+/* Brand colors */
+.sicon .facebook:hover,
+.sicon .facebook:hover .tooltip,
+.sicon .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+}
+
+.sicon .linkedin:hover,
+.sicon .linkedin:hover .tooltip,
+.sicon .linkedin:hover .tooltip::before {
+    background: #0077b5;
+    color: #fff;
+}
+
+.sicon .github:hover,
+.sicon .github:hover .tooltip,
+.sicon .github:hover .tooltip::before {
+    background: #333;
+    color: #fff;
+}
+
+.sicon .instagram:hover,
+.sicon .instagram:hover .tooltip,
+.sicon .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+}
 .ownimg {
     width: 50%;
     display: flex;
@@ -1107,13 +1173,15 @@ footer {
     /* REVIEWS */
     #review-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 
 
     /* SERVICES */
     #service {
         grid-template-columns: 1fr;
-         justify-items: center;
+        justify-items: center;
+        gap: 30px
     }
 
 
