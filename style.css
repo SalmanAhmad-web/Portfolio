@@ -54,6 +54,11 @@ header {
     gap: 30px;
 }
 
+.nav-wrapper.active {
+    right: 0 !important;
+}
+
+
 .navmenu ul li {
     padding: 0px 30px 0px 0px;
     color: #444444;
@@ -941,7 +946,6 @@ footer {
 }
 
 
-
 /* ================= MOBILE (0–600px) ================= */
 @media (max-width: 600px) {
 
@@ -952,75 +956,72 @@ footer {
 
     /* NAVBAR */
     header {
-        height: 65px;
-        padding: 10px 0px;
-        /* left-right padding add karein */
-        box-sizing: border-box;
+        height: 70px;
+        padding: 0 20px;
         display: flex;
         justify-content: space-between;
-        position: sticky;
-        overflow-x: hidden;
+        position: fixed; /* sticky se behtar fixed hai top par rehne ke liye */
+        background-color: #fafafa;
     }
 
     .navmenu {
+        width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        padding: 0;
     }
 
     .hamburg {
         display: block;
+        z-index: 2100;
     }
-
+    /* MOBILE MENU ITEMS DISPLAY FIX */
     .nav-wrapper {
         position: fixed;
-        top: 0px;
+        top: 0;
         right: -100%;
-        width: 75%;
-        height: 100%;
-        background: #fff;
+        width: 80%; /* Menu ki width */
+        height: 100vh;
+        background: #ffffff;
+        display: flex;
         flex-direction: column;
-        padding: 60px 20px;
-        gap: 25px;
-        transition: right 0.3s ease;
+        align-items: center; /* Items ko center mein karne ke liye */
+        justify-content: flex-start;
+        padding-top: 100px; /* Top se thori jagah */
+        transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         z-index: 2000;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
     }
 
-    .nav-wrapper.active {
-        right: 0;
+    .nav-wrapper ul {
+        display: flex;
+        flex-direction: column; /* Items ko vertical karne ke liye */
+        width: 100%;
+        padding: 0;
+        list-style: none;
     }
 
     .nav-wrapper ul li {
-        font-size: 18px;
-        /* readable size */
-        padding: 18px 10px;
-        /* spacing */
         width: 100%;
-        /* full width for tap area */
-        border-bottom: 1px solid #ddd;
-        /* subtle separator */
+        text-align: center; /* Text center mein rahega */
+        padding: 20px 0;    /* Clickable area barhane ke liye */
+        margin: 0;
+        border-bottom: 1px solid #f0f0f0; /* Halki line separating items */
+        display: block;      /* Full width line ke liye */
+        font-size: 18px;
         font-weight: 500;
-        color: #444;
-        transition: all 0.3s ease;
-        cursor: pointer;
+        color: #333;
     }
 
-    .nav-wrapper ul li:hover {
-        color: rgba(128, 0, 0, 0.815);
-        /* highlight on hover */
-        background-color: rgba(128, 0, 0, 0.05);
-        /* subtle hover bg */
+    .nav-wrapper ul li:last-child {
+        border-bottom: none; /* Akhri item ke niche line nahi chahiye */
     }
 
+    /* Active item ka color mobile menu mein */
     .nav-wrapper ul li.active {
-        color: rgba(128, 0, 0, 0.9);
-        font-weight: 600;
-        background-color: rgba(128, 0, 0, 0.1);
-    }
-
-    .nav-wrapper ul li::after {
         background-color: rgba(128, 0, 0, 0.05);
-        height: 2px;
-        transition: width 0.3s ease;
+        color: rgba(128, 0, 0, 0.815);
     }
 
 
@@ -1028,43 +1029,85 @@ footer {
         display: none;
     }
 
-    /* HERO */
+    /* HERO SECTION */
     .main {
-        flex-direction: column-reverse;
-        padding: 90px 15px 30px;
+        flex-direction: column-reverse; /* Image upar, Text niche */
+        padding: 100px 20px 40px; /* Header se niche spacing */
         text-align: center;
         height: auto;
+        gap: 40px;
     }
 
     .paragraph {
         width: 100%;
         height: auto;
         gap: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center alignment for mobile */
+    }
+
+    .buttontitle {
+        margin: 0 auto; /* Badge center */
     }
 
     .heading {
         width: 100%;
-        font-size: 26px;
+        font-size: 28px;
+        line-height: 1.2;
     }
 
+    .first, .second {
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 0 5px;
+    }
+
+    /* IMAGE */
     .ownimg {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
     }
 
     .ownimg img {
-        max-width: 220px;
-        width: 100%;
-        height: auto;
+        width: 240px; /* Mobile size optimized */
+        height: 240px;
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid rgba(128, 0, 0, 0.1);
     }
 
+    /* BUTTONS */
     .btns {
+        width: 100%;
         justify-content: center;
-        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
     }
 
-    .sicon {
-        justify-content: center;
+    .hire, .button {
+        flex: 1; /* Dono buttons barabar width ke honge */
+        max-width: 150px;
+        height: 42px;
+        font-size: 12px;
+        padding: 0;
     }
+
+    /* SOCIAL ICONS */
+    .wrapper {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .icon {
+        width: 45px;
+        height: 45px;
+        margin: 5px;
+    }
+
 
     /* ABOUT */
     .section {
