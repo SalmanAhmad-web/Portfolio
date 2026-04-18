@@ -102,27 +102,87 @@ header {
     white-space: normal;
     word-wrap: break-word;
 }
-
-.button {
+/* General Button Style (Dono CV buttons ke liye) */
+.button{
     cursor: pointer;
-    /* width: 150px; */
-    height: 45px;
-    background-color: #efefef;
-    border-radius: 7px;
-    padding: 10px;
-    border: none;
-    font-weight: bold;
-    display: flex;
+    height: 48px;
+    padding: 0 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none !important; /* Link underline khatam karne ke liye */
+    border: 2px solid rgba(128, 0, 0, 0.815);
+}
+.hire {
+    cursor: pointer;
+    height: 48px;
+    padding: 0 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none !important; /* Link underline khatam karne ke liye */
+    border: 2px solid rgba(128, 0, 0, 0.815);
+}
+
+
+/* Primary Button (HIRE ME - Dark look) */
+.hire {
+    background-color: rgba(128, 0, 0, 0.815);
+    color: white !important;
+    width: auto; /* Fixed width ki bajaye padding se handle karein */
+}
+
+.hire:hover {
+    background-color: transparent;
+    color: rgba(128, 0, 0, 0.815) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(128, 0, 0, 0.2);
+}
+
+/* Secondary Button (DOWNLOAD CV - Light look) */
+.button {
+    background-color: transparent;
+    color: rgba(128, 0, 0, 0.815) !important;
 }
 
 .button:hover {
     background-color: rgba(128, 0, 0, 0.815);
     color: white !important;
-
+    transform: translateY(-3px);
 }
+
+/* Icon ki setting */
+.button i {
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.button:hover i {
+    color: white !important;
+}
+
+
+.hideplay {
+    height: 40px; /* Navbar wala button thora chota rakhein */
+    font-size: 13px;
+}
+
+.btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
 
 .hamburg {
     display: none;
@@ -134,42 +194,39 @@ header {
     font-size: 28px;
     color: rgba(128, 0, 0, 0.85);
 }
-
 .buttontitle {
     cursor: pointer;
-    width: 100px;
-    height: 20px;
-    background-color: brown;
+    width: 130px; 
+    height: 28px;
+    background-color: rgba(128, 0, 0, 0.815);
     color: white;
-    border-radius: 7px;
+    border-radius: 4px;
     border: none;
-    font-weight: bold;
-    font-size: 9px;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 5px;
 }
-
-
 .main {
     width: 100%;
     display: flex;
     height: 100vh;
     background-color: #fafafa;
-
     justify-content: space-between;
-    /* better than center */
     align-items: center;
-    padding: 0 50px;
-    /* controlled spacing */
+    padding: 0 80px; 
 }
 
 .paragraph {
-    width: 50%;
+    width: 45%; 
     padding: 40px 0px;
-    gap: 24px;
+    gap: 20px; /* Gap thora kam kiya hai taake clean lage */
     display: grid;
-    height: 400px;
+    justify-items: start; /* Ye ensure karega ke sab kuch left aligned rahe */
 }
 
 .namebutton {
@@ -179,139 +236,119 @@ header {
     height: 40px;
 }
 
-.btns {
-    display: flex;
-    gap: 10px;
-
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
 }
 
-.hire {
-    width: 130px;
-    background-color: rgba(128, 0, 0, 0.815);
-    color: white;
-    height: 45px;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-.hire:hover {
-    transition: all 0.3s ease;
-    cursor: pointer;
-    transform: translateY(-5px);
-    background-color: white;
-    color: rgba(128, 0, 0, 0.815);
-
-}
-
-.butn {
-    margin-left: 20px;
-}
-
-.button2 {
-    width: 143px;
-    height: 30px;
-}
-.sicon {
-    display: flex;
-    gap: 20px;
-}
-
-.sicon .icon {
+.icon {
     position: relative;
     background: #fff;
     border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
     width: 50px;
     height: 50px;
+    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.sicon .icon a {
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sicon .icon i {
-    font-size: 20px;
-}
-
-/* Tooltip */
-.sicon .tooltip {
+.tooltip {
     position: absolute;
     top: 0;
+    left: 50%;
+     transform: translateX(-50%);
+    font-size: 14px;
     background: #fff;
     padding: 5px 8px;
     border-radius: 5px;
-    font-size: 12px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     opacity: 0;
     pointer-events: none;
-    transition: 0.3s;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.sicon .tooltip::before {
-    content: "";
+.tooltip::before {
     position: absolute;
+    content: "";
     height: 8px;
     width: 8px;
     background: #fff;
     bottom: -3px;
     left: 50%;
-    transform: translateX(-50%) rotate(45deg);
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.icon i{
+    color: black;
+
 }
 
-/* Hover effect */
-.sicon .icon:hover .tooltip {
-    top: -40px;
+.icon:hover .tooltip {
+    top: -45px;
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
-/* Brand colors */
-.sicon .facebook:hover,
-.sicon .facebook:hover .tooltip,
-.sicon .facebook:hover .tooltip::before {
+.icon:hover span,
+.icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.facebook:hover,
+.facebook:hover .tooltip,
+.facebook:hover .tooltip::before {
     background: #1877f2;
     color: #fff;
 }
 
-.sicon .linkedin:hover,
-.sicon .linkedin:hover .tooltip,
-.sicon .linkedin:hover .tooltip::before {
-    background: #0077b5;
+.instagram:hover,
+.instagram:hover .tooltip,
+.instagram:hover .tooltip::before {
+    background: #7C2CB7;
     color: #fff;
 }
 
-.sicon .github:hover,
-.sicon .github:hover .tooltip,
-.sicon .github:hover .tooltip::before {
+.github:hover,
+.github:hover .tooltip,
+.github:hover .tooltip::before {
     background: #333;
     color: #fff;
 }
 
-.sicon .instagram:hover,
-.sicon .instagram:hover .tooltip,
-.sicon .instagram:hover .tooltip::before {
-    background: #e4405f;
+.linkedin:hover,
+.linkedin:hover .tooltip,
+.linkedin:hover .tooltip::before {
+    background: #0077B5;
     color: #fff;
 }
+
 .ownimg {
     width: 50%;
     display: flex;
-    justify-content: center;
+    /* image ko poora right side par chipkanay ke liye */
+    justify-content: flex-end; 
     align-items: center;
 }
 
-.ownomg img {
-    object-fit: contain;
-    height: 85%;
+.ownimg img {
+    /* Image ka size agar thora chota karna ho to yahan se control karein */
+    width: 400px; 
+    height: 400px;
+    object-fit: cover;
     border-radius: 50%;
+    /* Image aur text ke beech mazeed gap ke liye */
+    margin-bottom: 20px; 
 }
+
 
 .paragraph,
 .ownimg {
