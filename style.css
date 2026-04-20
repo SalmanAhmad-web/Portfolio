@@ -1017,12 +1017,15 @@ footer {
     .nav-wrapper ul li:last-child {
         border-bottom: none; /* Akhri item ke niche line nahi chahiye */
     }
+    .navmenu ul li::after{
+        display: none
+    }
 
-    /* Active item ka color mobile menu mein */
     .nav-wrapper ul li.active {
         background-color: rgba(128, 0, 0, 0.05);
         color: rgba(128, 0, 0, 0.815);
     }
+   
 
 
     .hideplay {
