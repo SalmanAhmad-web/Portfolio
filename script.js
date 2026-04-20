@@ -120,6 +120,36 @@ footerItems.forEach(item => {
             });
         }
     });
+
+    // Scroll pe active nav item update karne ke liye
+const allSections = document.querySelectorAll("section[id], div[id]");
+
+window.addEventListener("scroll", () => {
+    let currentSection = "";
+
+    allSections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop <= 120) {  // 120px = header height + buffer
+            currentSection = section.getAttribute("id");
+        }
+    });
+
+    // Nav items update karo
+    navItems.forEach(item => {
+        item.classList.remove("active");
+        if (item.getAttribute("data-section") === currentSection) {
+            item.classList.add("active");
+        }
+    });
+
+    // Footer items bhi update karo (agar chahiye)
+    footerItems.forEach(item => {
+        item.classList.remove("active");
+        if (item.getAttribute("data-section") === currentSection) {
+            item.classList.add("active");
+        }
+    });
+});
 });const hamburger = document.getElementById("hamburg");
 const navWrapper = document.getElementById("navWrapper");
 const hamburgerIcon = document.getElementById("hamburgerIcon");
