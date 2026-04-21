@@ -1325,19 +1325,27 @@ footer {
 
 
     /* SERVICES - 2 column grid */
-        #service {
-            grid-template-columns: repeat(2, 1fr) !important;
-            padding: 20px !important;
-            gap: 15px !important;
-        }
+       #service {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 20px !important;
+        gap: 15px !important;
+        width: 100% !important;
+    }
 
-        .services {
-            width: 100% !important;
-            max-width: 100% !important;
-            height: 180px !important;
-            margin: 0 !important;
-            padding: 15px !important;
-        }
+    .services {
+        width: 90% !important;
+        max-width: 400px !important;
+        height: 180px !important;
+        padding: 20px !important;
+        border-radius: 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
 
         .services i {
             font-size: 36px !important;
@@ -1353,7 +1361,7 @@ footer {
 
 
     .proj {
-        height: 50vh;
+        height: 20vh;
     }
 
     .proj p {
@@ -1425,9 +1433,9 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    #service {
+    /* #service {
         grid-template-columns: repeat(2, 1fr);
-    }
+    } */
 
     #git {
         grid-template-columns: repeat(2, 1fr);
@@ -1514,7 +1522,7 @@ footer {
 
     /* SERVICES */
     #service {
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: 1fr;
         padding: 10px !important;
         gap: 8px !important;
     }
