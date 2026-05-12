@@ -587,6 +587,33 @@ header {
             transparent 100%);
     border-radius: 16px;
 }
+.store-password{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  padding: 6px 12px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 30px;
+  backdrop-filter: blur(8px);
+}
+
+.store-password .label{
+  font-size: 12px;
+  color: #d1d5db;
+  letter-spacing: 0.5px;
+}
+
+.store-password .password{
+  background: #fff;
+  color: #111827;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: lowercase;
+}
 
 /* Text Content */
 .card-content {
