@@ -107,8 +107,9 @@ header {
     white-space: normal;
     word-wrap: break-word;
 }
+
 /* General Button Style (Dono CV buttons ke liye) */
-.button{
+.button {
     cursor: pointer;
     height: 48px;
     padding: 0 15px;
@@ -120,9 +121,11 @@ header {
     justify-content: center;
     gap: 10px;
     transition: all 0.3s ease;
-    text-decoration: none !important; /* Link underline khatam karne ke liye */
+    text-decoration: none !important;
+    /* Link underline khatam karne ke liye */
     border: 2px solid rgba(128, 0, 0, 0.815);
 }
+
 .hire {
     cursor: pointer;
     height: 48px;
@@ -135,7 +138,8 @@ header {
     justify-content: center;
     gap: 10px;
     transition: all 0.3s ease;
-    text-decoration: none !important; /* Link underline khatam karne ke liye */
+    text-decoration: none !important;
+    /* Link underline khatam karne ke liye */
     border: 2px solid rgba(128, 0, 0, 0.815);
 }
 
@@ -144,7 +148,8 @@ header {
 .hire {
     background-color: rgba(128, 0, 0, 0.815);
     color: white !important;
-    width: auto; /* Fixed width ki bajaye padding se handle karein */
+    width: auto;
+    /* Fixed width ki bajaye padding se handle karein */
 }
 
 .hire:hover {
@@ -178,7 +183,8 @@ header {
 
 
 .hideplay {
-    height: 40px; /* Navbar wala button thora chota rakhein */
+    height: 40px;
+    /* Navbar wala button thora chota rakhein */
     font-size: 13px;
 }
 
@@ -199,9 +205,10 @@ header {
     font-size: 28px;
     color: rgba(128, 0, 0, 0.85);
 }
+
 .buttontitle {
     cursor: pointer;
-    width: 130px; 
+    width: 130px;
     height: 28px;
     background-color: rgba(128, 0, 0, 0.815);
     color: white;
@@ -216,6 +223,7 @@ header {
     justify-content: center;
     margin-bottom: 5px;
 }
+
 .main {
     width: 100%;
     display: flex;
@@ -223,15 +231,17 @@ header {
     background-color: #fafafa;
     justify-content: space-between;
     align-items: center;
-    padding: 0 80px; 
+    padding: 0 80px;
 }
 
 .paragraph {
-    width: 45%; 
+    width: 45%;
     padding: 40px 0px;
-    gap: 20px; /* Gap thora kam kiya hai taake clean lage */
+    gap: 20px;
+    /* Gap thora kam kiya hai taake clean lage */
     display: grid;
-    justify-items: start; /* Ye ensure karega ke sab kuch left aligned rahe */
+    justify-items: start;
+    /* Ye ensure karega ke sab kuch left aligned rahe */
 }
 
 .namebutton {
@@ -269,7 +279,7 @@ header {
     position: absolute;
     top: 0;
     left: 50%;
-     transform: translateX(-50%);
+    transform: translateX(-50%);
     font-size: 14px;
     background: #fff;
     padding: 5px 8px;
@@ -291,7 +301,8 @@ header {
     transform: translate(-50%) rotate(45deg);
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.icon i{
+
+.icon i {
     color: black;
 
 }
@@ -340,18 +351,18 @@ header {
     width: 50%;
     display: flex;
     /* image ko poora right side par chipkanay ke liye */
-    justify-content: flex-end; 
+    justify-content: flex-end;
     align-items: center;
 }
 
 .ownimg img {
     /* Image ka size agar thora chota karna ho to yahan se control karein */
-    width: 400px; 
+    width: 400px;
     height: 400px;
     object-fit: cover;
     border-radius: 50%;
     /* Image aur text ke beech mazeed gap ke liye */
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 
@@ -470,87 +481,90 @@ header {
     width: 45%;
 }
 
-
-/* ===== Title Section ===== */
+/* ── Section Header ─────────────────────────────── */
 #projects {
-    height: 30vh;
+    padding: 80px 80px 40px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: #fafafa;
-    gap: 12px;
+    align-items: flex-end;
 }
 
-#projects h1 {
-    font-size: 3rem;
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    letter-spacing: -1px;
+.projects-title-block h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 800;
+    color: #111;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
 }
 
-#projects h1 span {
-    color: rgba(128, 0, 0, 0.815);
+.projects-title-block h2 span {
+    color: rgba(128, 0, 0, 0.85);
 }
 
-#projects p {
-    color: #777;
+.projects-title-block p {
+    margin-top: 10px;
+    color: #888;
     font-size: 0.95rem;
-    max-width: 420px;
-    text-align: center;
+    max-width: 380px;
 }
 
-/* ===== Carousel Wrapper ===== */
+
+/* ── Carousel Wrapper ───────────────────────────── */
 .cardswrapper {
     position: relative;
     width: 100%;
-    background-color: #fafafa;
+    padding: 0 64px 60px;
     overflow: hidden;
-    padding: 0 40px 40px;
 }
 
-/* ===== Card List ===== */
+/* ── Card List ──────────────────────────────────── */
 .cardlist {
     display: flex;
-    gap: 24px;
+    gap: 20px;
     list-style: none;
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding: 0;
-    margin: 0;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    padding-bottom: 4px;
 }
 
 .cardlist::-webkit-scrollbar {
     display: none;
 }
 
-/* ===== Card Item ===== */
+/* ── Card Item ──────────────────────────────────── */
 .carditems {
     position: relative;
-    min-width: 440px;
-    height: 520px;
-    border-radius: 16px;
+    min-width: 420px;
+    height: 540px;
+    border-radius: 20px;
     overflow: hidden;
     flex-shrink: 0;
     cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Full-bleed Image */
+.carditems:hover {
+    transform: translateY(-6px);
+}
+
+/* Full-bleed image */
 .cardsimg {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.6s ease;
 }
 
 .carditems:hover .cardsimg {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
-/* Make anchor fill the card */
+
+/* Anchor fills card */
 .card-link {
     display: block;
     width: 100%;
@@ -559,110 +573,136 @@ header {
     color: inherit;
 }
 
-/* View Project CTA */
-.card-cta {
-    display: inline-block;
-    margin-top: 12px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: #fff;
-    letter-spacing: 0.05em;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    padding-bottom: 2px;
-    transition: border-color 0.3s ease, color 0.3s ease;
-}
-
-.carditems:hover .card-cta {
-    border-color: #fff;
-    color: #fff;
-}
-
-/* Dark Gradient Overlay */
+/* Gradient overlay */
 .card-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(to top,
-            hsla(0, 0%, 0%, 0.85) 0%,
-            hsla(0, 0%, 0%, 0.35) 45%,
+            hsla(0, 0%, 0%, 0.92) 0%,
+            hsla(0, 0%, 0%, 0.45) 40%,
             transparent 100%);
-    border-radius: 16px;
-}
-.store-password{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin: 10px 0;
-  padding: 6px 12px;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 30px;
-  backdrop-filter: blur(8px);
+    border-radius: 20px;
 }
 
-.store-password .label{
-  font-size: 12px;
-  color: #d1d5db;
-  letter-spacing: 0.5px;
-}
-
-.store-password .password{
-  background: #fff;
-  color: #111827;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: lowercase;
-}
-
-/* Text Content */
+/* Card content */
 .card-content {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 32px;
+    padding: 28px 28px 32px;
     z-index: 2;
 }
 
+
 .card-content h3 {
-    font-size: 1.75rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
     font-weight: 700;
     color: #fff;
-    font-family: 'Space Grotesk', sans-serif;
-    margin-bottom: 8px;
+    line-height: 1.1;
+    margin-bottom: 10px;
 }
 
 .card-content p {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.6;
+    margin-bottom: 16px;
 }
 
-/* ===== Navigation Buttons ===== */
+/* Tech tags */
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.card-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(6px);
+}
+
+/* Store password */
+.store-password {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+    margin-bottom: 14px;
+}
+
+.store-password .label {
+    font-size: 11px;
+    color: #d1d5db;
+    letter-spacing: 0.5px;
+}
+
+.store-password .password {
+    background: #fff;
+    color: #111;
+    padding: 3px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* CTA arrow */
+.card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.55);
+    letter-spacing: 0.05em;
+    transition: color 0.3s, gap 0.3s;
+}
+
+.carditems:hover .card-cta {
+    color: #fff;
+    gap: 10px;
+}
+
+/* ── Nav Buttons ────────────────────────────────── */
 .cardbtn {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    width: 48px;
-    height: 48px;
+    transform: translateY(-60%);
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
-    border: none;
-    background: rgba(115, 115, 115, 0.8);
-    backdrop-filter: blur(8px);
-    color: #fff;
-    font-size: 18px;
+    border: 2px solid rgba(128, 0, 0, 0.15);
+    background: #fff;
+    color: rgba(128, 0, 0, 0.85);
+    font-size: 16px;
     cursor: pointer;
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .cardbtn:hover {
-    background: rgba(115, 115, 115, 1);
-    transform: translateY(-50%) scale(1.1);
+    background: rgba(128, 0, 0, 0.85);
+    color: #fff;
+    border-color: transparent;
+    transform: translateY(-60%) scale(1.08);
+    box-shadow: 0 6px 24px rgba(128, 0, 0, 0.25);
 }
 
 .cardbtn.hidden {
@@ -676,6 +716,29 @@ header {
 
 .rightbtn {
     right: 8px;
+}
+
+/* ── Dot indicators ─────────────────────────────── */
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 28px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    width: 24px;
+    border-radius: 3px;
+    background: rgba(128, 0, 0, 0.85);
 }
 
 
@@ -845,6 +908,7 @@ body {
     margin: 15px;
     padding: 0px;
 }
+
 #service {
     display: grid;
     background-color: #fafafa;
@@ -900,6 +964,7 @@ body {
 .services:hover p {
     color: white;
 }
+
 #git {
     display: grid;
     width: 100%;
@@ -936,6 +1001,7 @@ body {
     font-size: 40px;
     color: rgba(128, 0, 0, 0.815);
 }
+
 footer {
     display: flex;
     justify-content: center;
@@ -1019,7 +1085,8 @@ footer {
         padding: 0 20px;
         display: flex;
         justify-content: space-between;
-        position: fixed; /* sticky se behtar fixed hai top par rehne ke liye */
+        position: fixed;
+        /* sticky se behtar fixed hai top par rehne ke liye */
         background-color: #fafafa;
     }
 
@@ -1035,27 +1102,32 @@ footer {
         display: block;
         z-index: 2100;
     }
+
     /* MOBILE MENU ITEMS DISPLAY FIX */
     .nav-wrapper {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 80%; /* Menu ki width */
+        width: 80%;
+        /* Menu ki width */
         height: 100vh;
         background: #ffffff;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Items ko center mein karne ke liye */
+        align-items: center;
+        /* Items ko center mein karne ke liye */
         justify-content: flex-start;
-        padding-top: 100px; /* Top se thori jagah */
+        padding-top: 100px;
+        /* Top se thori jagah */
         transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         z-index: 2000;
-        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
     }
 
     .nav-wrapper ul {
         display: flex;
-        flex-direction: column; /* Items ko vertical karne ke liye */
+        flex-direction: column;
+        /* Items ko vertical karne ke liye */
         width: 100%;
         padding: 0;
         list-style: none;
@@ -1063,20 +1135,26 @@ footer {
 
     .nav-wrapper ul li {
         width: 100%;
-        text-align: center; /* Text center mein rahega */
-        padding: 20px 0;    /* Clickable area barhane ke liye */
+        text-align: center;
+        /* Text center mein rahega */
+        padding: 20px 0;
+        /* Clickable area barhane ke liye */
         margin: 0;
-        border-bottom: 1px solid #f0f0f0; /* Halki line separating items */
-        display: block;      /* Full width line ke liye */
+        border-bottom: 1px solid #f0f0f0;
+        /* Halki line separating items */
+        display: block;
+        /* Full width line ke liye */
         font-size: 18px;
         font-weight: 500;
         color: #333;
     }
 
     .nav-wrapper ul li:last-child {
-        border-bottom: none; /* Akhri item ke niche line nahi chahiye */
+        border-bottom: none;
+        /* Akhri item ke niche line nahi chahiye */
     }
-    .navmenu ul li::after{
+
+    .navmenu ul li::after {
         display: none
     }
 
@@ -1084,7 +1162,7 @@ footer {
         background-color: rgba(128, 0, 0, 0.05);
         color: rgba(128, 0, 0, 0.815);
     }
-   
+
 
 
     .hideplay {
@@ -1093,8 +1171,10 @@ footer {
 
     /* HERO SECTION */
     .main {
-        flex-direction: column-reverse; /* Image upar, Text niche */
-        padding: 100px 20px 40px; /* Header se niche spacing */
+        flex-direction: column-reverse;
+        /* Image upar, Text niche */
+        padding: 100px 20px 40px;
+        /* Header se niche spacing */
         text-align: center;
         height: auto;
         gap: 40px;
@@ -1106,11 +1186,13 @@ footer {
         gap: 15px;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center alignment for mobile */
+        align-items: center;
+        /* Center alignment for mobile */
     }
 
     .buttontitle {
-        margin: 0 auto; /* Badge center */
+        margin: 0 auto;
+        /* Badge center */
     }
 
     .heading {
@@ -1119,7 +1201,8 @@ footer {
         line-height: 1.2;
     }
 
-    .first, .second {
+    .first,
+    .second {
         font-size: 14px;
         line-height: 1.5;
         padding: 0 5px;
@@ -1134,7 +1217,8 @@ footer {
     }
 
     .ownimg img {
-        width: 240px; /* Mobile size optimized */
+        width: 240px;
+        /* Mobile size optimized */
         height: 240px;
         max-width: 80%;
         object-fit: cover;
@@ -1150,8 +1234,10 @@ footer {
         margin-top: 10px;
     }
 
-    .hire, .button {
-        flex: 1; /* Dono buttons barabar width ke honge */
+    .hire,
+    .button {
+        flex: 1;
+        /* Dono buttons barabar width ke honge */
         max-width: 150px;
         height: 42px;
         font-size: 12px;
@@ -1169,7 +1255,8 @@ footer {
         height: 45px;
         margin: 5px;
     }
-     .facebook:active,
+
+    .facebook:active,
     .facebook:active .tooltip,
     .facebook:active .tooltip::before {
         background: #1877f2 !important;
@@ -1218,7 +1305,7 @@ footer {
         transform: none !important;
     }
 
-       .row {
+    .row {
         width: 100% !important;
         padding: 25px 18px !important;
         gap: 12px !important;
@@ -1226,7 +1313,7 @@ footer {
         box-sizing: border-box !important;
     }
 
-       .col {
+    .col {
         display: flex !important;
         flex-direction: column !important;
         width: 100% !important;
@@ -1261,88 +1348,34 @@ footer {
         box-sizing: border-box !important;
     }
 
-    /* PROJECTS */
-    /* ===== Carousel Wrapper ===== */
-    .cardswrapper {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        padding: 20px 0px 40px 0px;
+    #projects {
+        padding: 50px 24px 28px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
     }
 
-    /* Card List */
-    .cardlist {
-        display: flex;
-        gap: 16px;
-        list-style: none;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        padding: 0;
-        margin: 0;
-    }
-
-    /* Hide scrollbar */
-    .cardlist::-webkit-scrollbar {
+    .projects-counter {
         display: none;
     }
 
-    .cardlist {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+    .cardswrapper {
+        padding: 0 12px 48px;
     }
 
-    /* Card Item */
     .carditems {
-        position: relative;
-        flex: 0 0 90%;
-        max-width: 100%;
-        height: 400px;
-        border-radius: 16px;
-        overflow: hidden;
-        cursor: pointer;
-    }
-
-    .cardsimg {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
-
-    .carditems:hover .cardsimg {
-        transform: scale(1.05);
-    }
-
-    /* Overlay and Text */
-    .card-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to top,
-                hsla(0, 0%, 0%, 0.85) 0%,
-                hsla(0, 0%, 0%, 0.35) 45%,
-                transparent 100%);
-        border-radius: 16px;
-    }
-
-    .card-content {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 20px;
-        z-index: 2;
-        color: #fff;
+        min-width: 85vw;
+        height: 440px;
     }
 
     .card-content h3 {
-        font-size: 1.3rem;
-        font-weight: 700;
+        font-size: 1.5rem;
     }
 
-    .card-content p {
-        font-size: 0.85rem;
-        line-height: 1.4;
+    .cardbtn {
+        display: none;
     }
+
 
     /* REVIEWS */
     #review-grid {
@@ -1352,7 +1385,7 @@ footer {
 
 
     /* SERVICES - 2 column grid */
-       #service {
+    #service {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
@@ -1374,17 +1407,17 @@ footer {
         gap: 8px !important;
     }
 
-        .services i {
-            font-size: 36px !important;
-        }
+    .services i {
+        font-size: 36px !important;
+    }
 
-        .services h4 {
-            font-size: 13px !important;
-        }
+    .services h4 {
+        font-size: 13px !important;
+    }
 
-        .services p {
-            font-size: 11px !important;
-        }
+    .services p {
+        font-size: 11px !important;
+    }
 
 
     .proj {
@@ -1396,28 +1429,28 @@ footer {
     }
 
 
-   /* CONTACT - 2 column grid */
-        #git {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            padding: 20px !important;
-            gap: 15px !important;
-            width: 100% !important;
-        }
+    /* CONTACT - 2 column grid */
+    #git {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 20px !important;
+        gap: 15px !important;
+        width: 100% !important;
+    }
 
-        .contact {
-            width: 90% !important;
-            max-width: 400px !important;
-            height: 180px !important;
-            padding: 20px !important;
-            border-radius: 16px !important;
-            display: flex !important;
-            flex-direction: column !important;
-            justify-content: center !important;
-            align-items: center !important;
-            gap: 8px !important;
-        }
+    .contact {
+        width: 90% !important;
+        max-width: 400px !important;
+        height: 180px !important;
+        padding: 20px !important;
+        border-radius: 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
 
     .bottomfooter {
         display: flex;
@@ -1426,7 +1459,7 @@ footer {
     }
 
     .bottomfooter p {
-          flex-wrap: wrap;
+        flex-wrap: wrap;
     }
 }
 
@@ -1483,7 +1516,8 @@ footer {
         padding: 90px 14px 30px !important;
         gap: 25px !important;
     }
-    .name{
+
+    .name {
         font-size: medium;
     }
 
@@ -1496,7 +1530,8 @@ footer {
         height: 180px !important;
     }
 
-    .hire, .button {
+    .hire,
+    .button {
         max-width: 130px !important;
         height: 38px !important;
         font-size: 11px !important;
@@ -1519,7 +1554,8 @@ footer {
     .badge {
         font-size: 14px !important;
     }
-  .skill-list {
+
+    .skill-list {
         padding: 12px !important;
         gap: 6px !important;
     }

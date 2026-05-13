@@ -1,25 +1,49 @@
-
-    const cardList = document.querySelector(".cardlist");
-    const leftBtn = document.querySelector(".leftbtn");
+  const cardList = document.querySelector(".cardlist");
+    const leftBtn  = document.querySelector(".leftbtn");
     const rightBtn = document.querySelector(".rightbtn");
+    const dots     = document.querySelectorAll(".dot");
+    const cards    = document.querySelectorAll(".carditems");
+ 
     function getCardWidth() {
-      const card = document.querySelector(".carditems");
-      return card ? card.offsetWidth + 24 : 464;
+      const card = cards[0];
+      return card ? card.offsetWidth + 20 : 440;
     }
+ 
+    function getActiveIndex() {
+      const scrollLeft = cardList.scrollLeft;
+      return Math.round(scrollLeft / getCardWidth());
+    }
+ 
+    function updateDots(index) {
+      dots.forEach((d, i) => d.classList.toggle("active", i === index));
+    }
+ 
     function updateButtons() {
       const { scrollLeft, scrollWidth, clientWidth } = cardList;
       leftBtn.classList.toggle("hidden", scrollLeft <= 5);
       rightBtn.classList.toggle("hidden", scrollLeft >= scrollWidth - clientWidth - 5);
+      updateDots(getActiveIndex());
     }
+ 
     rightBtn.addEventListener("click", () => {
       cardList.scrollBy({ left: getCardWidth(), behavior: "smooth" });
-      setTimeout(updateButtons, 400);
+      setTimeout(updateButtons, 420);
     });
+ 
     leftBtn.addEventListener("click", () => {
       cardList.scrollBy({ left: -getCardWidth(), behavior: "smooth" });
-      setTimeout(updateButtons, 400);
+      setTimeout(updateButtons, 420);
     });
+ 
     cardList.addEventListener("scroll", updateButtons);
+ 
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        cardList.scrollTo({ left: i * getCardWidth(), behavior: "smooth" });
+        setTimeout(updateButtons, 420);
+      });
+    });
+ 
     updateButtons();
 
 
