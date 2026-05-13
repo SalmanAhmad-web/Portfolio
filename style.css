@@ -485,6 +485,7 @@ header {
 #projects {
     padding: 80px 80px 40px;
     display: flex;
+    background-color: #fafafa;
     justify-content: center;
     align-items: flex-end;
 }
@@ -514,6 +515,7 @@ header {
 .cardswrapper {
     position: relative;
     width: 100%;
+    background-color: #fafafa;
     padding: 0 64px 60px;
     overflow: hidden;
 }
