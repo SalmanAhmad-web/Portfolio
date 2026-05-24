@@ -1,4 +1,8 @@
-  const cardList = document.querySelector(".cardlist");
+document.getElementById("hireBtn").addEventListener("click", function() {
+    window.location.href = "mailto:salman.ahma553@gmail.com?subject=Hire%20Me%20-%20Web%20Development%20Project&body=Hi%20Salman%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20you.";
+});
+
+const cardList = document.querySelector(".cardlist");
     const leftBtn  = document.querySelector(".leftbtn");
     const rightBtn = document.querySelector(".rightbtn");
     const dots     = document.querySelectorAll(".dot");
