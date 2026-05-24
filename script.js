@@ -1,5 +1,7 @@
-document.getElementById("hireBtn").addEventListener("click", function() {
-    window.location.href = "mailto:salman.ahma553@gmail.com?subject=Hire%20Me%20-%20Web%20Development%20Project&body=Hi%20Salman%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20you.";
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("hireBtn").addEventListener("click", function() {
+        window.open("https://mail.google.com/mail/?view=cm&to=salman.ahma553@gmail.com&su=Hire Me - Web Development Project&body=Hi Salman, I would like to discuss a project with you.", "_blank");
+    });
 });
 
 const cardList = document.querySelector(".cardlist");
