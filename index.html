@@ -29,7 +29,7 @@
             </ul>
             <div class="navcta">
                 <a href="/Salman Ahmad Cv.pdf" class="btn btn--ghost"><i class="fa-regular fa-file-lines"></i>
-                    Resume</a>
+                    <span class="btn-label">Resume</span></a>
                 <button class="burger" id="burger"><i class="fa-solid fa-bars"></i></button>
             </div>
         </nav>
@@ -40,7 +40,7 @@
             <div class="hero-status"><i class="fa-solid fa-circle"></i> Open to freelance &amp; full-time work</div>
             <h1>Full-stack developer<br>building with <em>MERN</em> &amp;<br>Shopify Liquid.</h1>
             <p class="lead">I build web apps end to end, React Frontend, Node &amp; Express APIs, MongoDB data layers
-                 and design custom Php Laravel &amp; Shopify storefronts that convert.</p>
+                and design custom Php Laravel &amp; Shopify storefronts that convert.</p>
             <div class="hero-btns">
                 <a href="#projects" class="btn btn--solid">View my work <i class="fa-solid fa-arrow-right"></i></a>
                 <a href="#contact" class="btn btn--ghost">Get in touch</a>
@@ -168,9 +168,9 @@
                 <div class="skillcat">
                     <h4>Frontend</h4>
                     <ul>
+                        <li>HTML &amp; CSS</li>
                         <li>React</li>
                         <li>JavaScript</li>
-                        <li>HTML5 / CSS3</li>
                         <li>Liquid</li>
                         <li>Bootstrap</li>
                     </ul>
@@ -381,8 +381,17 @@
     <script>
         const burger = document.getElementById('burger');
         const navlinks = document.getElementById('navlinks');
-        burger.addEventListener('click', () => navlinks.classList.toggle('open'));
-        navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navlinks.classList.remove('open')));
+        const burgerIcon = burger.querySelector('i');
+        burger.addEventListener('click', () => {
+            const isOpen = navlinks.classList.toggle('open');
+            burgerIcon.classList.toggle('fa-bars', !isOpen);
+            burgerIcon.classList.toggle('fa-xmark', isOpen);
+        });
+        navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            navlinks.classList.remove('open');
+            burgerIcon.classList.add('fa-bars');
+            burgerIcon.classList.remove('fa-xmark');
+        }));
 
         const sections = document.querySelectorAll('section[id]');
         const navA = document.querySelectorAll('.navlinks a');
