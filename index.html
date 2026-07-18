@@ -20,12 +20,13 @@
         <nav class="nav">
             <div class="logo">Salman Ahmad</div>
             <ul class="navlinks" id="navlinks">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#stack">Stack</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#about"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="#stack"><i class="fa-solid fa-layer-group"></i> Stack</a></li>
+                <li><a href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+                <li><a href="#services"><i class="fa-solid fa-toolbox"></i> Services</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                <li class="navlinks-resume"><a href="/Salman Ahmad Cv.pdf"><i class="fa-regular fa-file-lines"></i> Resume</a></li>
             </ul>
             <div class="navcta">
                 <a href="/Salman Ahmad Cv.pdf" class="btn btn--ghost"><i class="fa-regular fa-file-lines"></i>
@@ -392,6 +393,15 @@
             burgerIcon.classList.add('fa-bars');
             burgerIcon.classList.remove('fa-xmark');
         }));
+
+        document.addEventListener('click', (e) => {
+            const isOpen = navlinks.classList.contains('open');
+            if (isOpen && !navlinks.contains(e.target) && !burger.contains(e.target)) {
+                navlinks.classList.remove('open');
+                burgerIcon.classList.add('fa-bars');
+                burgerIcon.classList.remove('fa-xmark');
+            }
+        });
 
         const sections = document.querySelectorAll('section[id]');
         const navA = document.querySelectorAll('.navlinks a');

@@ -284,6 +284,10 @@ header {
     transition: color .2s;
 }
 
+.navlinks a i {
+    display: none;
+}
+
 .navlinks a:hover,
 .navlinks a.active {
     color: var(--ink);
@@ -309,6 +313,12 @@ header {
     gap: 14px;
 }
 
+/* Resume link lives inside the mobile dropdown menu only —
+   hidden on desktop where the icon button in .navcta covers it */
+.navlinks-resume {
+    display: none;
+}
+
 .burger {
     display: none;
     background: none;
@@ -320,7 +330,8 @@ header {
 
 /* ---------- HERO ---------- */
 .hero {
-    padding: 140px 0 80px;
+    padding-top: 140px;
+    padding-bottom: 80px;
     display: grid;
     grid-template-columns: 1.05fr 0.95fr;
     gap: 64px;
@@ -907,31 +918,69 @@ footer {
         top: 78px;
         left: 0;
         width: 100%;
+        max-height: calc(100vh - 78px);
+        overflow-y: auto;
         background: var(--paper);
         flex-direction: column;
-        padding: 20px 24px 28px;
+        align-items: stretch;
+        padding: 12px 16px 20px;
         border-bottom: 1px solid var(--line);
+        box-shadow: 0 20px 34px -22px rgba(16, 20, 32, .18);
         display: none;
-        gap: 0;
+        gap: 2px;
     }
 
     .navlinks.open {
         display: flex;
     }
 
-    .navlinks a {
+    .navlinks li {
         width: 100%;
-        padding: 14px 0;
-        border-bottom: 1px solid var(--line);
     }
 
-    /* keep Resume reachable on mobile — collapse to an icon-only button
-       instead of hiding it completely */
+    /* was inline <a> with vertical padding + border-bottom, which never
+       reserved real layout space — the divider rendered on top of the
+       next link's text instead of between the two. display:flex fixes
+       that at the root, so the redesign below can't overlap. */
+    .navlinks a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        padding: 13px 14px;
+        border-radius: 10px;
+        font-size: 15px;
+        border-bottom: none;
+    }
+
+    .navlinks a i {
+        display: inline-block;
+        width: 18px;
+        text-align: center;
+        font-size: 14px;
+        color: var(--ink-soft);
+    }
+
+    .navlinks a:hover {
+        background: var(--surface);
+    }
+
+    .navlinks a.active {
+        background: var(--signal-soft);
+        color: var(--signal);
+    }
+
+    .navlinks a.active i {
+        color: var(--signal);
+    }
+
+    .navlinks a.active::after {
+        display: none;
+    }
+
+    /* Resume now lives inside the hamburger dropdown (at the end of the
+       link list) instead of as a separate icon button in the top bar */
     .navcta .btn--ghost {
-        padding: 10px 12px;
-    }
-
-    .navcta .btn--ghost .btn-label {
         display: none;
     }
 
@@ -939,9 +988,27 @@ footer {
         display: block;
     }
 
+    .navlinks-resume {
+        display: block;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid var(--line);
+    }
+
+    .navlinks-resume a {
+        border-radius: 10px;
+        color: var(--signal);
+        font-weight: 600;
+    }
+
+    .navlinks-resume a i {
+        color: var(--signal);
+    }
+
     .hero {
         grid-template-columns: 1fr;
-        padding: 150px 0 60px;
+        padding-top: 150px;
+        padding-bottom: 60px;
         gap: 48px;
     }
 
@@ -950,23 +1017,50 @@ footer {
     }
 
     .hero-btns {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
         margin-bottom: 40px;
     }
 
     .hero-btns .btn {
         justify-content: center;
+        flex: 1 1 0;
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    /* space under the social icons in the About section — shrink the
+       section's bottom padding so it doesn't stack with the next
+       section's top padding into a huge gap */
+    #about {
+        padding-bottom: 44px;
+    }
+
+    .about-actions {
+        margin-top: 26px;
+        gap: 18px;
+    }
+
+    .A-btn {
+        padding: 7px 11px;
+        font-size: 13.5px;
+        gap: 8px;
+    }
+
+    .about-socials a {
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
     }
 
     .hero-stats {
-        gap: 26px;
+        gap: 20px;
         flex-wrap: wrap;
     }
 
     .hero-stats div {
-        max-width: 200px;
+        max-width: 150px;
     }
 
     .section {
@@ -1055,7 +1149,8 @@ footer {
     }
 
     .hero {
-        padding: 140px 0 48px;
+        padding-top: 140px;
+        padding-bottom: 48px;
     }
 
     .hero h1 {
@@ -1117,6 +1212,43 @@ footer {
 
     .footlinks a {
         font-size: 13px;
+    }
+
+    .hero-btns {
+        gap: 8px;
+    }
+
+    .hero-btns .btn {
+        padding: 9px 8px;
+        font-size: 12px;
+        gap: 6px;
+    }
+
+    #about {
+        padding-bottom: 32px;
+    }
+
+    .about-socials {
+        gap: 10px;
+    }
+
+    .about-socials a {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .A-btn {
+        padding: 6px 10px;
+        font-size: 12.5px;
+    }
+
+    .hero-stats {
+        gap: 16px;
+    }
+
+    .hero-stats div p:first-child {
+        font-size: 20px;
     }
 }
 
