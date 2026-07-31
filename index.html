@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salman Ahmad — Full-Stack Developer</title>
+    <title>Salman Ahmad — Full-Stack &amp; Shopify App Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -31,7 +31,7 @@
             <div class="navcta">
                 <a href="Salman Ahmad Cv.pdf" class="btn btn--ghost"><i class="fa-regular fa-file-lines"></i>
                     <span class="btn-label">Resume</span></a>
-                <button class="burger" id="burger"><i class="fa-solid fa-bars"></i></button>
+                <button class="burger" id="burger" aria-label="Toggle navigation menu"><i class="fa-solid fa-bars"></i></button>
             </div>
         </nav>
     </header>
@@ -39,9 +39,11 @@
     <section class="hero wrap" id="home">
         <div>
             <div class="hero-status"><i class="fa-solid fa-circle"></i> Open to freelance &amp; full-time work</div>
-            <h1>Full-stack developer<br>building with <em>MERN</em> &amp;<br>Shopify Liquid.</h1>
-            <p class="lead">I build web apps end to end, React Frontend, Node &amp; Express APIs, MongoDB data layers
-                and design custom Php Laravel &amp; Shopify storefronts that convert.</p>
+            <h1>Full-stack developer<br>building with <em>MERN</em> &amp;<br>Shopify.</h1>
+            <p class="lead">I build web apps end to end — React front ends, Node &amp; Express APIs, MongoDB data
+                layers — and I design custom Shopify storefronts and full-stack Shopify apps, wiring Node.js
+                backends into the Admin API with Polaris. I still reach for PHP &amp; Laravel when a project calls
+                for it.</p>
             <div class="hero-btns">
                 <a href="#projects" class="btn btn--solid">View my work <i class="fa-solid fa-arrow-right"></i></a>
                 <a href="#contact" class="btn btn--ghost">Get in touch</a>
@@ -52,46 +54,39 @@
                     <p>Shipped projects</p>
                 </div>
                 <div>
-                    <p>2</p>
-                    <p>Core stacks — MERN &amp; Shopify</p>
+                    <p>3</p>
+                    <p>Core stacks — MERN, Shopify &amp; Node/Polaris apps</p>
                 </div>
             </div>
         </div>
 
         <div class="hero-visual">
-            <div class="hero-visual-backdrop"></div>
-            <div class="browser-card">
-                <div class="browser-bar">
-                    <span class="bdot"></span><span class="bdot"></span><span class="bdot"></span>
-                    <div class="baddress"><i class="fa-solid fa-lock"></i> salmanahmad.dev</div>
+            <div class="diff-card">
+                <div class="diff-card-head">
+                    <span class="diff-dot"></span>
+                    <span>stack.diff</span>
                 </div>
-                <div class="browser-body">
-                    <div class="wf-nav">
-                        <span class="wf-logo"></span>
-                        <span class="wf-link"></span>
-                        <span class="wf-link"></span>
-                        <span class="wf-link"></span>
-                    </div>
-                    <div class="wf-hero">
-                        <span class="wf-line wf-line--lg"></span>
-                        <span class="wf-line wf-line--md"></span>
-                        <span class="wf-cta"></span>
-                    </div>
-                    <div class="wf-grid">
-                        <span class="wf-card"></span>
-                        <span class="wf-card"></span>
-                        <span class="wf-card"></span>
-                    </div>
+                <div class="diff-body">
+                    <div class="diff-line diff-line--rm"><span class="diff-marker">−</span>plain HTML/CSS landing
+                        pages</div>
+                    <div class="diff-line diff-line--rm"><span class="diff-marker">−</span>Shopify themes only
+                        (Liquid)</div>
+                    <div class="diff-line diff-line--add"><span class="diff-marker">+</span>MERN apps — React,
+                        Node, Express, MongoDB</div>
+                    <div class="diff-line diff-line--add"><span class="diff-marker">+</span>Shopify apps — Node.js
+                        backend + Polaris admin UI</div>
+                    <div class="diff-line diff-line--add"><span class="diff-marker">+</span>REST &amp; GraphQL,
+                        checkout &amp; order webhooks</div>
+                    <div class="diff-line diff-line--add"><span class="diff-marker">+</span>PHP / Laravel when the
+                        stack calls for it</div>
                 </div>
             </div>
-            <div class="stack-badge">
-                <div class="label">Core stack</div>
-                <div class="icons">
-                    <i class="fa-brands fa-react" title="React"></i>
-                    <i class="fa-brands fa-node-js" title="Node.js"></i>
-                    <i class="fa-solid fa-database" title="MongoDB"></i>
-                    <i class="fa-brands fa-shopify" title="Shopify"></i>
-                </div>
+            <div class="stack-row">
+                <span class="stack-row-label">Currently shipping with</span>
+                <i class="fa-brands fa-react" title="React"></i>
+                <i class="fa-brands fa-node-js" title="Node.js"></i>
+                <i class="fa-solid fa-database" title="MongoDB"></i>
+                <i class="fa-brands fa-shopify" title="Shopify"></i>
             </div>
         </div>
 
@@ -99,14 +94,15 @@
 
     <section class="section" id="about">
         <div class="wrap">
-            <div class="eyebrow">About Me</div>
+            <div class="eyebrow"><span class="eyebrow-tag">//</span> About Me</div>
             <div class="section-head" style="max-width:760px;">
                 <h2>I build the whole product, not just one layer.</h2>
                 <p>I'm Salman Ahmad, a full-stack web developer from Bahawalpur, Pakistan. I build production-ready
                     applications on the MERN stack — MongoDB, Express, React and Node.js — and I design and develop
-                    custom Shopify themes with Liquid. From database schema to checkout flow, I build every layer
-                    myself, and I still reach for PHP and Laravel when a project calls for it. I write clean code,
-                    deliver on time, and communicate clearly.</p>
+                    custom Shopify themes with Liquid, plus full-stack Shopify apps: Node.js backends wired into
+                    the Admin API with a Polaris-based UI. From database schema to checkout flow, I build every
+                    layer myself, and I still reach for PHP and Laravel when a project calls for it. I write clean
+                    code, deliver on time, and communicate clearly.</p>
                 <div class="about-actions">
                     <a href="Salman Ahmad Cv.pdf" download class="A-btn A-btn--ghost">
                         <i class="fa-regular fa-file-lines"></i>
@@ -114,19 +110,19 @@
                     </a>
 
                     <div class="about-socials">
-                        <a href="https://www.linkedin.com/in/salman-ahmad-989951346" target="_blank" class="linkedin">
+                        <a href="https://www.linkedin.com/in/salman-ahmad-989951346" target="_blank" class="linkedin" aria-label="LinkedIn">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
 
-                        <a href="https://github.com/SalmanAhmad-arch" target="_blank" class="github">
+                        <a href="https://github.com/SalmanAhmad-arch" target="_blank" class="github" aria-label="GitHub">
                             <i class="fa-brands fa-github"></i>
                         </a>
 
-                        <a href="https://www.facebook.com/share/1CG95E5Szq/" target="_blank" class="facebook">
+                        <a href="https://www.facebook.com/share/1CG95E5Szq/" target="_blank" class="facebook" aria-label="Facebook">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
 
-                        <a href="https://www.instagram.com/salmanahmad691" target="_blank" class="instagram">
+                        <a href="https://www.instagram.com/salmanahmad691" target="_blank" class="instagram" aria-label="Instagram">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                     </div>
@@ -137,10 +133,11 @@
 
     <section class="section section--alt" id="stack">
         <div class="wrap">
-            <div class="eyebrow">Stack</div>
+            <div class="eyebrow"><span class="eyebrow-tag">//</span> Stack</div>
             <div class="section-head">
                 <h2>How I build things</h2>
-                <p>Two flows I work in daily — a MERN application pipeline, and a Shopify storefront pipeline.</p>
+                <p>Three flows I work in — a MERN application pipeline, a Shopify storefront pipeline, and a
+                    Shopify custom-app pipeline.</p>
             </div>
 
             <div class="pipeline">
@@ -162,6 +159,17 @@
                     <div class="pnode"><i class="fa-brands fa-shopify"></i> Liquid theme</div>
                     <span class="parrow">→</span>
                     <div class="pnode"><i class="fa-solid fa-cart-shopping"></i> Apps &amp; checkout</div>
+                </div>
+            </div>
+
+            <div class="pipeline">
+                <div class="pipeline-label"><b>Shopify custom apps</b> — backend to admin UI</div>
+                <div class="pipeline-row">
+                    <div class="pnode"><i class="fa-brands fa-node-js"></i> Node.js / Express</div>
+                    <span class="parrow">→</span>
+                    <div class="pnode"><i class="fa-brands fa-shopify"></i> Shopify Admin API</div>
+                    <span class="parrow">→</span>
+                    <div class="pnode"><i class="fa-solid fa-table-columns"></i> Polaris UI</div>
                 </div>
             </div>
 
@@ -198,6 +206,7 @@
                     <h4>Platforms</h4>
                     <ul>
                         <li>Shopify</li>
+                        <li>Shopify Polaris</li>
                         <li>REST API</li>
                         <li>GraphQL</li>
                     </ul>
@@ -208,7 +217,7 @@
 
     <section class="section" id="projects">
         <div class="wrap">
-            <div class="eyebrow">Projects</div>
+            <div class="eyebrow"><span class="eyebrow-tag">//</span> Projects</div>
             <div class="section-head">
                 <h2>Selected work</h2>
                 <p>Five projects across e-commerce, Shopify, and full-stack builds — final versions will use live
@@ -217,8 +226,10 @@
             <div class="pgrid">
 
                 <div class="pcard">
-                    <a href="https://eligia.ecomkix.com/" target="_blank"
-                        class="pthumb"><span>eligia.ecomkix.com</span></a>
+                    <a href="https://eligia.ecomkix.com/" target="_blank" class="pthumb">
+                        <span class="pmonogram">E</span>
+                        <span class="url-tag">eligia.ecomkix.com</span>
+                    </a>
                     <div class="pbody">
                         <h3>Eligia</h3>
                         <p>Full-stack Laravel e-commerce platform with product management, order handling, and a
@@ -231,8 +242,10 @@
                 </div>
 
                 <div class="pcard">
-                    <a href="https://maison.ecomkix.com/" target="_blank"
-                        class="pthumb"><span>maison.ecomkix.com</span></a>
+                    <a href="https://maison.ecomkix.com/" target="_blank" class="pthumb">
+                        <span class="pmonogram">M</span>
+                        <span class="url-tag">maison.ecomkix.com</span>
+                    </a>
                     <div class="pbody">
                         <h3>Maison</h3>
                         <p>Scalable e-commerce store with CRUD operations, cart, checkout, login/signup, admin
@@ -245,8 +258,10 @@
                 </div>
 
                 <div class="pcard">
-                    <a href="https://ironclad.ecomkix.com/" target="_blank"
-                        class="pthumb"><span>ironclad.ecomkix.com</span></a>
+                    <a href="https://ironclad.ecomkix.com/" target="_blank" class="pthumb">
+                        <span class="pmonogram">I</span>
+                        <span class="url-tag">ironclad.ecomkix.com</span>
+                    </a>
                     <div class="pbody">
                         <h3>Ironclad Roofing</h3>
                         <p>Modern roofing services website built with React and Vite. Responsive design, quote form, and
@@ -258,8 +273,10 @@
                 </div>
 
                 <div class="pcard">
-                    <a href="https://salman-ahmadd.myshopify.com/" target="_blank"
-                        class="pthumb"><span>salman-ahmadd.myshopify.com</span></a>
+                    <a href="https://salman-ahmadd.myshopify.com/" target="_blank" class="pthumb">
+                        <span class="pmonogram">H</span>
+                        <span class="url-tag">salman-ahmadd.myshopify.com</span>
+                    </a>
                     <div class="pbody">
                         <h3>Hardware Systems</h3>
                         <p>Converted a Figma design into a fully responsive Shopify theme using Liquid templating.</p>
@@ -270,8 +287,10 @@
                 </div>
 
                 <div class="pcard">
-                    <a href="https://salmanahmad-web.github.io/Maple-Bean/" target="_blank"
-                        class="pthumb"><span>Maple-Bean</span></a>
+                    <a href="https://salmanahmad-web.github.io/Maple-Bean/" target="_blank" class="pthumb">
+                        <span class="pmonogram">MB</span>
+                        <span class="url-tag">Maple-Bean</span>
+                    </a>
                     <div class="pbody">
                         <h3>Maple-Bean Café</h3>
                         <p>Minimal 4-page layout designed for an international café, with smooth, lightweight
@@ -289,7 +308,7 @@
 
     <section class="section section--alt" id="services">
         <div class="wrap">
-            <div class="eyebrow">Services</div>
+            <div class="eyebrow"><span class="eyebrow-tag">//</span> Services</div>
             <div class="section-head">
                 <h2>What I can build for you</h2>
             </div>
@@ -317,6 +336,14 @@
                 <div class="scard"><i class="fa-solid fa-table-columns"></i>
                     <h3>Admin dashboards</h3>
                     <p>Internal tools for managing products, orders, and customers.</p>
+                </div>
+                <div class="scard scard--feature">
+                    <i class="fa-brands fa-shopify"></i>
+                    <div>
+                        <h3>Shopify app development</h3>
+                        <p>Embedded admin apps built with Node.js, wired into the Shopify Admin API with a Polaris
+                            interface.</p>
+                    </div>
                 </div>
             </div>
         </div>
