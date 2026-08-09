@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salman Ahmad — Full-Stack &amp; Shopify App Developer</title>
+    <title>Salman Ahmad | Full-Stack &amp; Shopify App Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -18,7 +18,7 @@
 
     <header>
         <nav class="nav">
-            <div class="logo">Salman Ahmad</div>
+            <div class="logo">Salman Ahmad<span class="logo-dot">.</span></div>
             <ul class="navlinks" id="navlinks">
                 <li><a href="#home" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
                 <li><a href="#about"><i class="fa-solid fa-user"></i> About</a></li>
@@ -29,7 +29,7 @@
                 <li class="navlinks-resume"><a href="Salman Ahmad Cv.pdf"><i class="fa-regular fa-file-lines"></i> Resume</a></li>
             </ul>
             <div class="navcta">
-                <a href="Salman Ahmad Cv.pdf" class="btn btn--ghost"><i class="fa-regular fa-file-lines"></i>
+                <a href="Salman Ahmad Cv.pdf" class="btn btn--dark"><i class="fa-regular fa-file-lines"></i>
                     <span class="btn-label">Resume</span></a>
                 <button class="burger" id="burger" aria-label="Toggle navigation menu"><i class="fa-solid fa-bars"></i></button>
             </div>
@@ -40,22 +40,21 @@
         <div>
             <div class="hero-status"><i class="fa-solid fa-circle"></i> Open to freelance &amp; full-time work</div>
             <h1>Full-stack developer<br>building with <em>MERN</em> &amp;<br>Shopify.</h1>
-            <p class="lead">I build web apps end to end — React front ends, Node &amp; Express APIs, MongoDB data
-                layers — and I design custom Shopify storefronts and full-stack Shopify apps, wiring Node.js
-                backends into the Admin API with Polaris. I still reach for PHP &amp; Laravel when a project calls
-                for it.</p>
+            <p class="lead">I build end-to-end web apps with React, Node/Express and MongoDB, plus custom Shopify
+                storefronts and full-stack Shopify apps wired into the Admin API with Polaris. PHP &amp; Laravel
+                when a project calls for it.</p>
             <div class="hero-btns">
                 <a href="#projects" class="btn btn--solid">View my work <i class="fa-solid fa-arrow-right"></i></a>
                 <a href="#contact" class="btn btn--ghost">Get in touch</a>
             </div>
             <div class="hero-stats">
-                <div>
+                <div class="stat-card">
                     <p>5</p>
                     <p>Shipped projects</p>
                 </div>
-                <div>
+                <div class="stat-card">
                     <p>3</p>
-                    <p>Core stacks — MERN, Shopify &amp; Node/Polaris apps</p>
+                    <p>Core stacks: MERN, Shopify &amp; Node/Polaris</p>
                 </div>
             </div>
         </div>
@@ -63,22 +62,21 @@
         <div class="hero-visual">
             <div class="diff-card">
                 <div class="diff-card-head">
-                    <span class="diff-dot"></span>
-                    <span>stack.diff</span>
+                    <span class="chrome-dots"><i></i><i></i><i></i></span>
+                    <span>shopify-webhook.js</span>
                 </div>
-                <div class="diff-body">
-                    <div class="diff-line diff-line--rm"><span class="diff-marker">−</span>plain HTML/CSS landing
-                        pages</div>
-                    <div class="diff-line diff-line--rm"><span class="diff-marker">−</span>Shopify themes only
-                        (Liquid)</div>
-                    <div class="diff-line diff-line--add"><span class="diff-marker">+</span>MERN apps — React,
-                        Node, Express, MongoDB</div>
-                    <div class="diff-line diff-line--add"><span class="diff-marker">+</span>Shopify apps — Node.js
-                        backend + Polaris admin UI</div>
-                    <div class="diff-line diff-line--add"><span class="diff-marker">+</span>REST &amp; GraphQL,
-                        checkout &amp; order webhooks</div>
-                    <div class="diff-line diff-line--add"><span class="diff-marker">+</span>PHP / Laravel when the
-                        stack calls for it</div>
+                <div class="code-body">
+                    <div class="code-line"><span class="tok-comment">// runs when Shopify sends an order</span></div>
+                    <div class="code-line">app.post(<span class="tok-string">'/order'</span>, <span class="tok-keyword">async</span> (req, res) => {</div>
+                    <div class="code-line code-i1"><span class="tok-keyword">const</span> { id, total_price } = req.body;</div>
+                    <div class="code-line">&nbsp;</div>
+                    <div class="code-line code-i1"><span class="tok-keyword">await</span> <span class="tok-func">Order</span>.create({</div>
+                    <div class="code-line code-i2"><span class="tok-prop">shopifyId</span>: id,</div>
+                    <div class="code-line code-i2"><span class="tok-prop">total</span>: total_price,</div>
+                    <div class="code-line code-i1">});</div>
+                    <div class="code-line">&nbsp;</div>
+                    <div class="code-line code-i1">res.sendStatus(200);</div>
+                    <div class="code-line">});</div>
                 </div>
             </div>
             <div class="stack-row">
@@ -94,11 +92,11 @@
 
     <section class="section" id="about">
         <div class="wrap">
-            <div class="eyebrow"><span class="eyebrow-tag">//</span> About Me</div>
+            <div class="eyebrow">About Me</div>
             <div class="section-head" style="max-width:760px;">
                 <h2>I build the whole product, not just one layer.</h2>
                 <p>I'm Salman Ahmad, a full-stack web developer from Bahawalpur, Pakistan. I build production-ready
-                    applications on the MERN stack — MongoDB, Express, React and Node.js — and I design and develop
+                    applications on the MERN stack (MongoDB, Express, React and Node.js), and I design and develop
                     custom Shopify themes with Liquid, plus full-stack Shopify apps: Node.js backends wired into
                     the Admin API with a Polaris-based UI. From database schema to checkout flow, I build every
                     layer myself, and I still reach for PHP and Laravel when a project calls for it. I write clean
@@ -133,15 +131,15 @@
 
     <section class="section section--alt" id="stack">
         <div class="wrap">
-            <div class="eyebrow"><span class="eyebrow-tag">//</span> Stack</div>
+            <div class="eyebrow">Stack</div>
             <div class="section-head">
                 <h2>How I build things</h2>
-                <p>Three flows I work in — a MERN application pipeline, a Shopify storefront pipeline, and a
+                <p>Three flows I work in: a MERN application pipeline, a Shopify storefront pipeline, and a
                     Shopify custom-app pipeline.</p>
             </div>
 
             <div class="pipeline">
-                <div class="pipeline-label"><b>Full-stack web apps</b> — client to database</div>
+                <div class="pipeline-label"><b>Full-stack web apps</b>: client to database</div>
                 <div class="pipeline-row">
                     <div class="pnode"><i class="fa-brands fa-react"></i> React client</div>
                     <span class="parrow">→</span>
@@ -152,7 +150,7 @@
             </div>
 
             <div class="pipeline">
-                <div class="pipeline-label"><b>Shopify storefronts</b> — design to checkout</div>
+                <div class="pipeline-label"><b>Shopify storefronts</b>: design to checkout</div>
                 <div class="pipeline-row">
                     <div class="pnode"><i class="fa-solid fa-pen-ruler"></i> Figma design</div>
                     <span class="parrow">→</span>
@@ -163,7 +161,7 @@
             </div>
 
             <div class="pipeline">
-                <div class="pipeline-label"><b>Shopify custom apps</b> — backend to admin UI</div>
+                <div class="pipeline-label"><b>Shopify custom apps</b>: backend to admin UI</div>
                 <div class="pipeline-row">
                     <div class="pnode"><i class="fa-brands fa-node-js"></i> Node.js / Express</div>
                     <span class="parrow">→</span>
@@ -217,10 +215,10 @@
 
     <section class="section" id="projects">
         <div class="wrap">
-            <div class="eyebrow"><span class="eyebrow-tag">//</span> Projects</div>
+            <div class="eyebrow">Projects</div>
             <div class="section-head">
                 <h2>Selected work</h2>
-                <p>Five projects across e-commerce, Shopify, and full-stack builds — final versions will use live
+                <p>Five projects across e-commerce, Shopify, and full-stack builds. Final versions will use live
                     screenshots.</p>
             </div>
             <div class="pgrid">
@@ -233,7 +231,7 @@
                     <div class="pbody">
                         <h3>Eligia</h3>
                         <p>Full-stack Laravel e-commerce platform with product management, order handling, and a
-                            dedicated admin panel — deployed on a production VPS.</p>
+                            dedicated admin panel, deployed on a production VPS.</p>
                         <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">PHP</span><span
                                 class="ptag">MySQL</span></div>
                         <a href="https://eligia.ecomkix.com/" target="_blank" class="plink">View project <i
@@ -308,7 +306,7 @@
 
     <section class="section section--alt" id="services">
         <div class="wrap">
-            <div class="eyebrow"><span class="eyebrow-tag">//</span> Services</div>
+            <div class="eyebrow">Services</div>
             <div class="section-head">
                 <h2>What I can build for you</h2>
             </div>
@@ -385,7 +383,7 @@
 
     <footer>
         <div class="footrow">
-            <div class="logo">Salman Ahmad</div>
+            <div class="logo">Salman Ahmad<span class="logo-dot">.</span></div>
             <ul class="footlinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -403,7 +401,7 @@
                         class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
-        <p class="copy">Copyright © Salman Ahmad — All rights reserved.</p>
+        <p class="copy">Copyright © Salman Ahmad. All rights reserved.</p>
     </footer>
 
     <script>

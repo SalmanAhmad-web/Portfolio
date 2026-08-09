@@ -8,10 +8,10 @@
     --accent: #3B3AA8;
     --accent-bright: #5251C7;
     --accent-soft: #E7E6F7;
-    --diff-add-bg: #E5F4E9;
-    --diff-add-text: #1E7A44;
-    --diff-rm-bg: #FBE9E9;
-    --diff-rm-text: #B23434;
+    --code-keyword: #3B3AA8;
+    --code-string: #1E7A44;
+    --code-prop: #B2751F;
+    --code-comment: #8A93A6;
     --radius: 14px;
 }
 
@@ -69,13 +69,6 @@ h3 {
     align-items: center;
     gap: 8px;
     margin-bottom: 14px;
-}
-
-.eyebrow-tag {
-    color: var(--accent);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 700;
-    letter-spacing: normal;
 }
 
 .wrap {
@@ -152,6 +145,26 @@ h3 {
 .btn--ghost-dark:hover {
     border-color: #fff;
     transform: translateY(-2px);
+}
+
+.btn--dark {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: #fff;
+}
+
+.btn--dark:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* nav CTA and hero CTAs get a fuller pill radius — scoped so the rest
+   of the site's buttons (services, contact) keep their original shape */
+.navcta .btn,
+.hero-btns .btn {
+    border-radius: 100px;
+    padding: 12px 22px;
 }
 
 /* About Button & Social */
@@ -264,14 +277,15 @@ header {
 }
 
 .logo {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
     font-size: 19px;
+    letter-spacing: -0.01em;
     color: var(--ink);
-    padding: 6px 10px;
-    border: 1.5px solid var(--line);
-    border-radius: 8px;
+}
+
+.logo-dot {
+    color: var(--accent);
 }
 
 .navlinks {
@@ -369,15 +383,17 @@ header {
 }
 
 .hero h1 {
-    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
     font-size: 46px;
-    line-height: 1.14;
+    line-height: 1.16;
+    letter-spacing: -0.01em;
     margin-bottom: 20px;
 }
 
 .hero h1 em {
-    font-style: italic;
-    font-weight: 500;
+    font-style: normal;
+    font-weight: 700;
     color: var(--accent);
 }
 
@@ -396,27 +412,34 @@ header {
 
 .hero-stats {
     display: flex;
-    gap: 40px;
-    border-top: 1px solid var(--line);
-    padding-top: 24px;
+    gap: 16px;
 }
 
-.hero-stats div p:first-child {
-    font-family: 'Fraunces', serif;
-    font-weight: 600;
-    font-size: 25px;
+.stat-card {
+    flex: 1;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+    padding: 16px 18px;
 }
 
-.hero-stats div p:last-child {
+.stat-card p:first-child {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--ink);
+}
+
+.stat-card p:last-child {
     font-family: 'Montserrat', sans-serif;
-    font-size: 12.5px;
+    font-size: 12px;
     color: var(--ink-soft);
     margin-top: 4px;
 }
 
-/* hero visual — a git-diff style "stack.diff" card standing in for a
-   screenshot: shows the skills that were dropped vs. picked up, which
-   is a more honest signature than a fake wireframed browser window. */
+/* hero visual — a small real code snippet standing in for a screenshot:
+   shows Node/Express, MongoDB and a Shopify webhook working together in
+   one glance, which says more than a generic mock browser window. */
 .hero-visual {
     position: relative;
     max-width: 400px;
@@ -447,52 +470,71 @@ header {
     letter-spacing: .02em;
 }
 
-.diff-dot {
+.chrome-dots {
+    display: inline-flex;
+    gap: 5px;
+}
+
+.chrome-dots i {
     width: 8px;
     height: 8px;
     border-radius: 50%;
     background: var(--line);
 }
 
-.diff-body {
-    padding: 6px 0;
+.chrome-dots i:nth-child(1) {
+    background: #E8A5A5;
 }
 
-.diff-line {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 9px 18px;
-    font-size: 13.5px;
-    line-height: 1.5;
+.chrome-dots i:nth-child(2) {
+    background: #E8D5A5;
+}
+
+.chrome-dots i:nth-child(3) {
+    background: #A8D9B5;
+}
+
+.code-body {
+    padding: 18px 0;
+}
+
+.code-line {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    line-height: 1.85;
+    padding: 0 20px;
     color: var(--ink);
+    white-space: pre;
 }
 
-.diff-marker {
+.code-i1 {
+    padding-left: 38px;
+}
+
+.code-i2 {
+    padding-left: 56px;
+}
+
+.tok-comment {
+    color: var(--code-comment);
+}
+
+.tok-keyword {
+    color: var(--code-keyword);
+    font-weight: 500;
+}
+
+.tok-string {
+    color: var(--code-string);
+}
+
+.tok-func {
+    color: var(--ink);
     font-weight: 700;
-    width: 10px;
-    flex-shrink: 0;
 }
 
-.diff-line--rm {
-    background: var(--diff-rm-bg);
-    color: var(--diff-rm-text);
-    text-decoration: line-through;
-    text-decoration-thickness: 1px;
-    opacity: .85;
-}
-
-.diff-line--rm .diff-marker {
-    color: var(--diff-rm-text);
-}
-
-.diff-line--add {
-    background: var(--diff-add-bg);
-    color: var(--diff-add-text);
-}
-
-.diff-line--add .diff-marker {
-    color: var(--diff-add-text);
+.tok-prop {
+    color: var(--code-prop);
 }
 
 .stack-row {
@@ -962,7 +1004,7 @@ footer {
 
     /* Resume lives inside the hamburger dropdown (end of the link list)
        instead of as a separate icon button in the top bar */
-    .navcta .btn--ghost {
+    .navcta .btn--dark {
         display: none;
     }
 
@@ -1101,13 +1143,12 @@ footer {
     }
 
     .hero-visual {
-        max-width: 340px;
+        max-width: 360px;
         margin: 0 auto;
     }
 
-    .diff-line {
-        font-size: 12.5px;
-        padding: 8px 16px;
+    .code-line {
+        font-size: 12px;
     }
 }
 
@@ -1115,7 +1156,6 @@ footer {
 @media (max-width:480px) {
     .logo {
         font-size: 17px;
-        padding: 5px 8px;
     }
 
     .hero {
@@ -1160,7 +1200,7 @@ footer {
     }
 
     .hero-visual {
-        max-width: 280px;
+        max-width: 305px;
     }
 
     .diff-card-head {
@@ -1168,10 +1208,19 @@ footer {
         font-size: 11px;
     }
 
-    .diff-line {
-        font-size: 11.5px;
-        padding: 7px 14px;
-        gap: 8px;
+    .code-line {
+        font-size: 11px;
+        padding-left: 12px;
+        padding-right: 12px;
+        line-height: 1.7;
+    }
+
+    .code-i1 {
+        padding-left: 26px;
+    }
+
+    .code-i2 {
+        padding-left: 40px;
     }
 
     .scard--feature {
