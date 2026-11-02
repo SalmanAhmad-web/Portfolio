@@ -1152,6 +1152,32 @@ footer {
     }
 }
 
+@media (max-width:768px) {
+    .pipeline {
+        width: 100%;
+        max-height: 180px;
+    }
+
+    .pipeline-row {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .pnode,
+    .parrow {
+        flex: 0 0 auto;
+    }
+
+    .parrow {
+        transform: none;
+        align-self: auto;
+    }
+}
+
 /* ---------- SMALL PHONES ---------- */
 @media (max-width:480px) {
     .logo {
@@ -1284,4 +1310,64 @@ footer {
         animation: none !important;
         transition: none !important;
     }
+}
+
+@media (max-width: 768px) {
+
+  /* STACK */
+  .pipeline-row {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .pipeline-row::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .pipeline-row::-webkit-scrollbar-thumb {
+    background: #3b3bd4;
+    border-radius: 4px;
+  }
+
+  .pnode {
+    flex: 0 0 auto;
+    min-width: 140px;
+    scroll-snap-align: start;
+  }
+
+  /* SERVICES */
+  .sgrid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .scard {
+    flex: 0 0 75vw;
+    min-width: 260px;
+    scroll-snap-align: start;
+  }
+
+  /* PROJECTS */
+  .pgrid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .pcard {
+    flex: 0 0 80vw;
+    min-width: 280px;
+    scroll-snap-align: start;
+  }
 }
