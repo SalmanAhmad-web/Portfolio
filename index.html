@@ -62,14 +62,8 @@
             </div>
         </div>
 
-        <div class="hero-visual">
-            <div class="stack-row">
-                <span class="stack-row-label">Currently shipping with</span>
-                <i class="fa-brands fa-react" title="React"></i>
-                <i class="fa-brands fa-node-js" title="Node.js"></i>
-                <i class="fa-solid fa-database" title="MongoDB"></i>
-                <i class="fa-brands fa-shopify" title="Shopify"></i>
-            </div>
+        <div class="hero-img">
+            <img src="ownimg.png" alt="Salman Ahmad" />
         </div>
 
     </section>
@@ -112,8 +106,34 @@
                     </div>
                 </div>
             </div>
-            <div class="about-img">
-                <img src="ownimg.png" alt="Salman Ahmad" />
+
+            <div class="hero-visual">
+                <div class="diff-card">
+                    <div class="diff-card-head">
+                        <span class="chrome-dots"><i></i><i></i><i></i></span>
+                        <span>shopify-webhook.js</span>
+                    </div>
+                    <div class="code-body">
+                        <div class="code-line"><span class="tok-comment">// runs when Shopify sends an order</span></div>
+                        <div class="code-line">app.post(<span class="tok-string">'/order'</span>, <span class="tok-keyword">async</span> (req, res) =&gt; {</div>
+                        <div class="code-line code-i1"><span class="tok-keyword">const</span> { id, total_price } = req.body;</div>
+                        <div class="code-line">&nbsp;</div>
+                        <div class="code-line code-i1"><span class="tok-keyword">await</span> <span class="tok-func">Order</span>.create({</div>
+                        <div class="code-line code-i2"><span class="tok-prop">shopifyId</span>: id,</div>
+                        <div class="code-line code-i2"><span class="tok-prop">total</span>: total_price,</div>
+                        <div class="code-line code-i1">});</div>
+                        <div class="code-line">&nbsp;</div>
+                        <div class="code-line code-i1">res.sendStatus(200);</div>
+                        <div class="code-line">});</div>
+                    </div>
+                </div>
+                <div class="stack-row">
+                    <span class="stack-row-label">Currently shipping with</span>
+                    <i class="fa-brands fa-react" title="React"></i>
+                    <i class="fa-brands fa-node-js" title="Node.js"></i>
+                    <i class="fa-solid fa-database" title="MongoDB"></i>
+                    <i class="fa-brands fa-shopify" title="Shopify"></i>
+                </div>
             </div>
         </div>
     </section>
