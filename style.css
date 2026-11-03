@@ -433,10 +433,28 @@ header {
     margin-top: 4px;
 }
 
+#about .wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 0;
+}
+
 .hero-visual {
     position: relative;
     max-width: 400px;
+    flex-shrink: 0;
     margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    #about .wrap {
+        flex-direction: column;
+    }
 }
 
 .about-card {
