@@ -19,7 +19,7 @@
   html,body{
     margin:0;
     padding:0;
-    background:#fff;
+    background:#E9EBEF;
     color:var(--ink);
     font-family:'DM Sans', Arial, Helvetica, sans-serif;
   }
@@ -29,6 +29,10 @@
     min-height:11.2in;
     margin:0 auto;
     padding:0.52in 0.7in;
+    background:#F6F7F9;
+    border:1.5px solid var(--accent);
+    border-radius:10px;
+    box-shadow:0 0 0 1px rgba(59,58,168,.06), 0 6px 22px rgba(59,58,168,.14);
   }
 
   a{ color:var(--accent); text-decoration:none; }
@@ -200,9 +204,9 @@
   .languages{ font-size:10.5px; color:var(--ink); }
 
   @media print{
-    body{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-    @page{ size:A4; margin:0; }
-    .page{ padding:0.5in 0.62in; width:auto; min-height:0; }
+    body{ -webkit-print-color-adjust:exact; print-color-adjust:exact; background:#F6F7F9; }
+    @page{ size:A4; margin:0.14in; }
+    .page{ padding:0.36in 0.48in; width:auto; min-height:0; }
     .entry, .proj, h2{ break-inside:avoid; }
   }
 </style>
