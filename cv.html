@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Salman Ahmad — Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1A1D22;
+    --ink-soft:#4B525A;
+    --line:#D7DEDD;
+    --accent:#3B3AA8;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html,body{
+    margin:0;
+    padding:0;
+    background:#fff;
+    color:var(--ink);
+    font-family:'DM Sans', Arial, Helvetica, sans-serif;
+  }
+
+  .page{
+    width:8.27in;
+    min-height:11.2in;
+    margin:0 auto;
+    padding:0.52in 0.7in;
+  }
+
+  a{ color:var(--accent); text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+
+  /* ---------- header ---------- */
+  .name{
+    margin:0 0 4px;
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:29px;
+    letter-spacing:.01em;
+    color:var(--ink);
+    text-align:center;
+  }
+
+  .title{
+    margin:0 0 11px;
+    font-family:'Montserrat', sans-serif;
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--accent);
+    text-align:center;
+  }
+
+  .contact{
+    margin:0 0 2px;
+    font-size:10.8px;
+    line-height:1.75;
+    color:var(--ink-soft);
+    text-align:center;
+    padding-bottom:11px;
+    border-bottom:1.5px solid var(--ink);
+  }
+
+  .contact a{ color:var(--ink-soft); }
+  .contact .sep{ margin:0 7px; color:var(--line); }
+
+  /* ---------- sections ---------- */
+  h2{
+    margin:14px 0 7px;
+    font-family:'Montserrat', sans-serif;
+    font-weight:700;
+    font-size:11px;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--accent);
+    padding-bottom:4px;
+    border-bottom:1px solid var(--line);
+  }
+
+  h2:first-of-type{ margin-top:12px; }
+
+  p.summary{
+    margin:0;
+    font-size:11px;
+    line-height:1.6;
+    color:var(--ink);
+  }
+
+  /* ---------- skills ---------- */
+  .skill-line{
+    margin:0 0 5px;
+    font-size:10.5px;
+    line-height:1.55;
+    color:var(--ink);
+  }
+
+  .skill-line b{
+    font-weight:700;
+    color:var(--ink);
+  }
+
+  /* ---------- experience / education rows ---------- */
+  .entry{ margin-bottom:10px; }
+  .entry:last-child{ margin-bottom:0; }
+
+  .entry-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:10px;
+  }
+
+  .role{
+    font-weight:700;
+    font-size:11.5px;
+    color:var(--ink);
+  }
+
+  .date{
+    flex-shrink:0;
+    font-size:10px;
+    font-weight:600;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+
+  .org{
+    margin:1px 0 6px;
+    font-size:10.5px;
+    font-style:italic;
+    color:var(--ink-soft);
+  }
+
+  ul.bullets{
+    margin:0;
+    padding-left:15px;
+  }
+
+  ul.bullets li{
+    font-size:10.5px;
+    line-height:1.55;
+    color:var(--ink);
+    margin-bottom:4px;
+  }
+
+  ul.bullets li::marker{ color:var(--accent); }
+
+  /* ---------- projects ---------- */
+  .proj{ margin-bottom:7px; }
+  .proj:last-child{ margin-bottom:0; }
+
+  .proj-head{
+    font-size:11px;
+    line-height:1.4;
+  }
+
+  .proj-head .proj-name{
+    font-weight:700;
+    color:var(--ink);
+  }
+
+  .proj-head .proj-link{
+    margin-left:6px;
+    font-size:10px;
+  }
+
+  .proj p{
+    margin:2px 0 0;
+    font-size:10.3px;
+    line-height:1.5;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- education / languages ---------- */
+  .edu-row{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    font-size:10.5px;
+    margin-bottom:5px;
+  }
+
+  .edu-row .deg{ font-weight:600; color:var(--ink); }
+  .edu-row .school{ color:var(--ink-soft); }
+  .edu-row .yr{ flex-shrink:0; color:var(--ink-soft); white-space:nowrap; }
+
+  .languages{ font-size:10.5px; color:var(--ink); }
+
+  @media print{
+    body{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    @page{ size:A4; margin:0; }
+    .page{ padding:0.5in 0.62in; width:auto; min-height:0; }
+    .entry, .proj, h2{ break-inside:avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="name">SALMAN AHMAD</div>
+  <div class="title">Full-Stack Web &amp; Shopify Developer</div>
+  <div class="contact">
+    Bahawalpur, Pakistan<span class="sep">|</span><a href="tel:+923067388012">+92 306 7388012</a><span class="sep">|</span><a href="mailto:salman.ahma553@gmail.com">salman.ahma553@gmail.com</a><br>
+    <a href="https://salmanahmad-web.github.io/Portfolio/" target="_blank">salmanahmad-web.github.io/Portfolio</a><span class="sep">|</span><a href="https://github.com/salmanahmad-web" target="_blank">github.com/salmanahmad-web</a><span class="sep">|</span><a href="https://www.linkedin.com/in/salman-ahmad-989951346" target="_blank">linkedin.com/in/salman-ahmad</a>
+  </div>
+
+  <!-- SUMMARY -->
+  <h2>Professional Summary</h2>
+  <p class="summary">
+    Full-Stack Web &amp; Shopify Developer with 3+ years of experience building production e-commerce platforms and web applications. Skilled in the MERN stack (MongoDB, Express, React, Node.js), Shopify theme development (Liquid, custom sections, metafields), Shopify app development (Node.js, GraphQL Admin API, webhooks, Polaris), and PHP/Laravel backends. Experienced in converting Figma designs into responsive, production-ready interfaces and deploying on VPS infrastructure.
+  </p>
+
+  <!-- SKILLS -->
+  <h2>Technical Skills</h2>
+  <p class="skill-line"><b>Frontend:</b> HTML5, CSS3, JavaScript, React, Shopify Liquid, Bootstrap</p>
+  <p class="skill-line"><b>Backend:</b> Node.js, Express.js, PHP, Laravel</p>
+  <p class="skill-line"><b>Databases:</b> MongoDB, MySQL, PostgreSQL</p>
+  <p class="skill-line"><b>Platforms &amp; APIs:</b> Shopify (Liquid, Admin API, Polaris), REST API, GraphQL</p>
+  <p class="skill-line"><b>Tools:</b> Git, GitHub, Figma, VS Code, VPS / Hostinger Deployment</p>
+
+  <!-- EXPERIENCE -->
+  <h2>Work Experience</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="role">Full-Stack Web &amp; Shopify Developer</span>
+      <span class="date">May 2024 – Present</span>
+    </div>
+    <div class="org">E-Comkix, Bahawalpur, Pakistan</div>
+    <ul class="bullets">
+      <li>Built Shopify stores for clients (Wig Party, Forte Series) using Liquid, custom sections and metafields, converting Figma designs into responsive pages.</li>
+      <li>Developed a Shopify Order &amp; Invoicing app with Node.js and the GraphQL Admin API, including webhook integration and one-click PDF invoice generation.</li>
+      <li>Built and deployed Laravel/MySQL e-commerce platforms on production VPS infrastructure, including server setup and database migrations.</li>
+      <li>Contributed Laravel backend features and REST API endpoints as part of the E-Comkix development team.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="role">Freelance Web Developer</span>
+      <span class="date">2023 – 2024</span>
+    </div>
+    <div class="org">Self-Employed, Remote</div>
+    <ul class="bullets">
+      <li>Delivered full-stack MERN and Laravel projects, including Eligia (fashion e-commerce) and Ironclad Roofing (React/Vite marketing site).</li>
+      <li>Designed and built responsive UIs from scratch, managing the full project lifecycle from requirements to delivery.</li>
+      <li>Communicated directly with clients to scope requirements and ensure on-time delivery.</li>
+    </ul>
+  </div>
+
+  <!-- PROJECTS -->
+  <h2>Selected Projects</h2>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-name">Wig Party</span><a class="proj-link" href="https://wigparty.com/" target="_blank">wigparty.com</a></div>
+    <p>Shopify store built from Figma designs using Liquid, custom sections and metafields for a wig retail brand.</p>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-name">Forte Series</span><a class="proj-link" href="https://forteseries.com/" target="_blank">forteseries.com</a></div>
+    <p>Shopify store built with Liquid and custom sections for a live e-commerce brand.</p>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-name">Shopify Order &amp; Invoicing App</span></div>
+    <p>Custom Shopify admin app built with Node.js and the GraphQL Admin API — webhook-driven order sync and one-click PDF invoice generation via PDFKit.</p>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-name">Hardware Systems</span><a class="proj-link" href="https://salman-ahmadd.myshopify.com" target="_blank">salman-ahmadd.myshopify.com</a></div>
+    <p>Converted a Figma design into a fully responsive Shopify theme using Liquid templating and custom JavaScript interactions.</p>
+  </div>
+
+  <!-- EDUCATION -->
+  <h2>Education</h2>
+  <div class="edu-row"><span><span class="deg">Intermediate (ICS)</span> <span class="school">— Govt. Degree College, Bahawalpur</span></span><span class="yr">2019 – 2021</span></div>
+  <div class="edu-row"><span><span class="deg">Matriculation</span> <span class="school">— Govt. High School, Sama Satta</span></span><span class="yr">2017 – 2019</span></div>
+
+  <!-- LANGUAGES -->
+  <h2>Languages</h2>
+  <div class="languages">English (Advanced), Urdu (Native)</div>
+
+</div>
+
+</body>
+</html>
