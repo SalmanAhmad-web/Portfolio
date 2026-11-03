@@ -73,6 +73,10 @@ h3 {
     padding: 0 40px;
 }
 
+section[id] {
+    scroll-margin-top: 90px;
+}
+
 .section {
     padding: 110px 0;
 }
