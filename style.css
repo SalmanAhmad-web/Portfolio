@@ -8,10 +8,6 @@
     --accent: #3B3AA8;
     --accent-bright: #5251C7;
     --accent-soft: #E7E6F7;
-    --code-keyword: #3B3AA8;
-    --code-string: #1E7A44;
-    --code-prop: #B2751F;
-    --code-comment: #8A93A6;
     --radius: 14px;
 }
 
@@ -437,104 +433,78 @@ header {
     margin-top: 4px;
 }
 
-/* hero visual — a small real code snippet standing in for a screenshot:
-   shows Node/Express, MongoDB and a Shopify webhook working together in
-   one glance, which says more than a generic mock browser window. */
 .hero-visual {
     position: relative;
     max-width: 400px;
     margin-left: auto;
 }
 
-.diff-card {
+.about-card {
     position: relative;
     z-index: 1;
     border-radius: 16px;
-    overflow: hidden;
     border: 1px solid var(--line);
     background: #fff;
     box-shadow: 0 24px 50px -28px rgba(20, 24, 30, .28);
+    padding: 26px 26px 22px;
 }
 
-.diff-card-head {
+.about-card-head {
     display: flex;
     align-items: center;
     gap: 9px;
-    padding: 13px 18px;
-    border-bottom: 1px solid var(--line);
-    background: var(--surface);
+    margin-bottom: 22px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--ink-soft);
-    letter-spacing: .02em;
-}
-
-.chrome-dots {
-    display: inline-flex;
-    gap: 5px;
-}
-
-.chrome-dots i {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--line);
-}
-
-.chrome-dots i:nth-child(1) {
-    background: #E8A5A5;
-}
-
-.chrome-dots i:nth-child(2) {
-    background: #E8D5A5;
-}
-
-.chrome-dots i:nth-child(3) {
-    background: #A8D9B5;
-}
-
-.code-body {
-    padding: 18px 0;
-}
-
-.code-line {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12.5px;
-    line-height: 1.85;
-    padding: 0 20px;
-    color: var(--ink);
-    white-space: pre;
-}
-
-.code-i1 {
-    padding-left: 38px;
-}
-
-.code-i2 {
-    padding-left: 56px;
-}
-
-.tok-comment {
-    color: var(--code-comment);
-}
-
-.tok-keyword {
-    color: var(--code-keyword);
-    font-weight: 500;
-}
-
-.tok-string {
-    color: var(--code-string);
-}
-
-.tok-func {
-    color: var(--ink);
+    font-size: 13px;
     font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--ink);
 }
 
-.tok-prop {
-    color: var(--code-prop);
+.about-card-head i {
+    color: var(--accent);
+    font-size: 15px;
+}
+
+.about-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.about-facts li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.about-facts li i {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 14px;
+}
+
+.about-facts b {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.about-facts span {
+    display: block;
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: var(--ink-soft);
 }
 
 .stack-row {
@@ -1157,10 +1127,6 @@ footer {
         max-width: 360px;
         margin: 0 auto;
     }
-
-    .code-line {
-        font-size: 12px;
-    }
 }
 
 @media (max-width:768px) {
@@ -1240,24 +1206,13 @@ footer {
         max-width: 305px;
     }
 
-    .diff-card-head {
-        padding: 11px 14px;
-        font-size: 11px;
+    .about-card {
+        padding: 20px 20px 18px;
     }
 
-    .code-line {
-        font-size: 11px;
-        padding-left: 12px;
-        padding-right: 12px;
-        line-height: 1.7;
-    }
-
-    .code-i1 {
-        padding-left: 26px;
-    }
-
-    .code-i2 {
-        padding-left: 40px;
+    .about-card-head {
+        margin-bottom: 18px;
+        font-size: 12px;
     }
 
     .scard--feature {
@@ -1380,44 +1335,6 @@ footer {
     flex: 0 0 80vw;
     min-width: 280px;
     scroll-snap-align: start;
-  }
-}
-
-/* ABOUT SECTION - Two Column Layout */
-#about .wrap {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 3rem;
-}
-
-.about-text {
-  flex: 1;
-}
-
-.about-img {
-  flex-shrink: 0;
-  width: 280px;
-  height: 340px;
-}
-
-.about-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  border-radius: 12px;
-}
-
-/* MOBILE: image comes first, above text */
-@media (max-width: 768px) {
-  #about .wrap {
-    flex-direction: column-reverse;
-  }
-
-  .about-img {
-    width: 100%;
-    height: 260px;
   }
 }
 
@@ -2029,8 +1946,7 @@ footer {
   flex-direction: column;
 }
 
-#projects .pthumb,
-#projects .pcard-img {
+#projects .pthumb {
   position: relative;
   display: flex;
   flex: 0 0 150px;
@@ -2041,20 +1957,7 @@ footer {
   background: var(--dark);
 }
 
-#projects .pcard-letter {
-  position: absolute;
-  top: -16px;
-  left: 8px;
-  color: rgba(255, 255, 255, .09);
-  font-family: 'Fraunces', serif;
-  font-size: 92px;
-  font-weight: 600;
-  line-height: 1;
-  pointer-events: none;
-}
-
-#projects .url-tag,
-#projects .pcard-url {
+#projects .url-tag {
   position: relative;
   padding: 5px 10px;
   border-radius: 6px;
@@ -2065,8 +1968,7 @@ footer {
   font-weight: 500;
 }
 
-#projects .pbody,
-#projects .pcard-body {
+#projects .pbody {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -2074,14 +1976,12 @@ footer {
   padding: 22px 22px 24px;
 }
 
-#projects .pbody h3,
-#projects .pcard-body h3 {
+#projects .pbody h3 {
   margin-bottom: 8px;
   font-size: 18px;
 }
 
-#projects .pbody p,
-#projects .pcard-body p {
+#projects .pbody p {
   flex: 1;
   min-height: 0;
   margin-bottom: 16px;
@@ -2090,16 +1990,14 @@ footer {
   line-height: 1.6;
 }
 
-#projects .ptags,
-#projects .pcard-tags {
+#projects .ptags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   margin-bottom: 16px;
 }
 
-#projects .ptag,
-#projects .pcard-tags span {
+#projects .ptag {
   padding: 4px 9px;
   border-radius: 20px;
   background: var(--accent-soft);
@@ -2109,8 +2007,7 @@ footer {
   font-weight: 600;
 }
 
-#projects .plink,
-#projects .pcard-link {
+#projects .plink {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -2127,7 +2024,6 @@ footer {
   transition: transform .2s;
 }
 
-#projects .pcard-link:hover,
 #projects .plink:hover {
   color: var(--accent);
 }
@@ -2196,7 +2092,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-  #projects .pcard-body,
   #projects .pbody {
     padding: 18px;
   }

@@ -5,13 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salman Ahmad | Full-Stack &amp; Shopify App Developer</title>
+    <meta name="description" content="Salman Ahmad is a full-stack developer building with the MERN stack (React, Node.js, MongoDB) and Shopify — custom Liquid themes and Shopify apps wired into the Admin API with Polaris.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Salman Ahmad | Full-Stack &amp; Shopify App Developer">
+    <meta property="og:description" content="Full-stack developer building with the MERN stack and Shopify — custom storefronts, Shopify apps and Laravel/PHP backends.">
+    <meta property="og:image" content="https://salmanahmad-web.github.io/Portfolio/FB_IMG_1768382460910.jpg.jpeg">
+    <meta property="og:url" content="https://salmanahmad-web.github.io/Portfolio/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Salman Ahmad | Full-Stack &amp; Shopify App Developer">
+    <meta name="twitter:description" content="Full-stack developer building with the MERN stack and Shopify — custom storefronts, Shopify apps and Laravel/PHP backends.">
+    <meta name="twitter:image" content="https://salmanahmad-web.github.io/Portfolio/FB_IMG_1768382460910.jpg.jpeg">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -90,19 +100,19 @@
                         </a>
 
                         <div class="about-socials">
-                            <a href="https://www.linkedin.com/in/salman-ahmad-989951346" target="_blank" class="linkedin" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/in/salman-ahmad-989951346" target="_blank" rel="noopener noreferrer" class="linkedin" aria-label="LinkedIn">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
 
-                            <a href="https://github.com/SalmanAhmad-arch" target="_blank" class="github" aria-label="GitHub">
+                            <a href="https://github.com/salmanahmad-web" target="_blank" rel="noopener noreferrer" class="github" aria-label="GitHub">
                                 <i class="fa-brands fa-github"></i>
                             </a>
 
-                            <a href="https://www.facebook.com/share/1CG95E5Szq/" target="_blank" class="facebook" aria-label="Facebook">
+                            <a href="https://www.facebook.com/share/1CG95E5Szq/" target="_blank" rel="noopener noreferrer" class="facebook" aria-label="Facebook">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
 
-                            <a href="https://www.instagram.com/salmanahmad691" target="_blank" class="instagram" aria-label="Instagram">
+                            <a href="https://www.instagram.com/salmanahmad691" target="_blank" rel="noopener noreferrer" class="instagram" aria-label="Instagram">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </div>
@@ -111,24 +121,26 @@
             </div>
 
             <div class="hero-visual">
-                <div class="diff-card">
-                    <div class="diff-card-head">
-                        <span class="chrome-dots"><i></i><i></i><i></i></span>
-                        <span>shopify-webhook.js</span>
-                    </div>
-                    <div class="code-body">
-                        <div class="code-line"><span class="tok-comment">// runs when Shopify sends an order</span></div>
-                        <div class="code-line">app.post(<span class="tok-string">'/order'</span>, <span class="tok-keyword">async</span> (req, res) =&gt; {</div>
-                        <div class="code-line code-i1"><span class="tok-keyword">const</span> { id, total_price } = req.body;</div>
-                        <div class="code-line">&nbsp;</div>
-                        <div class="code-line code-i1"><span class="tok-keyword">await</span> <span class="tok-func">Order</span>.create({</div>
-                        <div class="code-line code-i2"><span class="tok-prop">shopifyId</span>: id,</div>
-                        <div class="code-line code-i2"><span class="tok-prop">total</span>: total_price,</div>
-                        <div class="code-line code-i1">});</div>
-                        <div class="code-line">&nbsp;</div>
-                        <div class="code-line code-i1">res.sendStatus(200);</div>
-                        <div class="code-line">});</div>
-                    </div>
+                <div class="about-card">
+                    <div class="about-card-head"><i class="fa-solid fa-circle-check"></i> At a glance</div>
+                    <ul class="about-facts">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div><b>Based in</b><span>Bahawalpur, Pakistan — working with clients worldwide</span></div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-briefcase"></i>
+                            <div><b>Experience</b><span>3+ years building production e-commerce platforms</span></div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-bolt"></i>
+                            <div><b>Availability</b><span>Open to freelance &amp; full-time work</span></div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-comments"></i>
+                            <div><b>Languages</b><span>English (advanced), Urdu (native)</span></div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="stack-row">
                     <span class="stack-row-label">Currently shipping with</span>
@@ -282,37 +294,33 @@
             <div class="pgrid">
 
                 <div class="pcard">
-                  <a href="https://wigparty.com" target="_blank" rel="noopener noreferrer" class="pcard-img">
-                    <span class="pcard-letter">W</span>
-                    <span class="pcard-url">wigparty.com</span>
+                  <a href="https://wigparty.com" target="_blank" rel="noopener noreferrer" class="pthumb">
+                    <span class="pmonogram">W</span>
+                    <span class="url-tag">wigparty.com</span>
                   </a>
-                  <div class="pcard-body">
+                  <div class="pbody">
                     <h3>Wig Party</h3>
                     <p>Shopify store built from Figma designs using Liquid, custom sections, metafields, and responsive layouts for a wig retail brand.</p>
-                    <div class="pcard-tags">
-                      <span>Shopify</span><span>Liquid</span><span>Figma</span>
-                    </div>
-                    <a href="https://wigparty.com" target="_blank" class="pcard-link">View project →</a>
+                    <div class="ptags"><span class="ptag">Shopify</span><span class="ptag">Liquid</span><span class="ptag">Figma</span></div>
+                    <a href="https://wigparty.com" target="_blank" rel="noopener noreferrer" class="plink">View project <i class="fa-solid fa-arrow-right"></i></a>
                   </div>
                 </div>
 
                 <div class="pcard">
-                  <a href="https://forteseries.com" target="_blank" rel="noopener noreferrer" class="pcard-img">
-                    <span class="pcard-letter">F</span>
-                    <span class="pcard-url">forteseries.com</span>
+                  <a href="https://forteseries.com" target="_blank" rel="noopener noreferrer" class="pthumb">
+                    <span class="pmonogram">F</span>
+                    <span class="url-tag">forteseries.com</span>
                   </a>
-                  <div class="pcard-body">
+                  <div class="pbody">
                     <h3>Forte Series</h3>
                     <p>Shopify store built with Liquid and custom sections for a live e-commerce brand at E-Comkix.</p>
-                    <div class="pcard-tags">
-                      <span>Shopify</span><span>Liquid</span><span>E-Comkix</span>
-                    </div>
-                    <a href="https://forteseries.com" target="_blank" class="pcard-link">View project →</a>
+                    <div class="ptags"><span class="ptag">Shopify</span><span class="ptag">Liquid</span><span class="ptag">E-Comkix</span></div>
+                    <a href="https://forteseries.com" target="_blank" rel="noopener noreferrer" class="plink">View project <i class="fa-solid fa-arrow-right"></i></a>
                   </div>
                 </div>
 
                 <div class="pcard">
-                    <a href="https://eligia.ecomkix.com/" target="_blank" class="pthumb">
+                    <a href="https://eligia.ecomkix.com/" target="_blank" rel="noopener noreferrer" class="pthumb">
                         <span class="pmonogram">E</span>
                         <span class="url-tag">eligia.ecomkix.com</span>
                     </a>
@@ -322,13 +330,13 @@
                             dedicated admin panel, deployed on a production VPS.</p>
                         <div class="ptags"><span class="ptag">Laravel</span><span class="ptag">PHP</span><span
                                 class="ptag">MySQL</span></div>
-                        <a href="https://eligia.ecomkix.com/" target="_blank" class="plink">View project <i
+                        <a href="https://eligia.ecomkix.com/" target="_blank" rel="noopener noreferrer" class="plink">View project <i
                                 class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <div class="pcard">
-                    <a href="https://maison.ecomkix.com/" target="_blank" class="pthumb">
+                    <a href="https://maison.ecomkix.com/" target="_blank" rel="noopener noreferrer" class="pthumb">
                         <span class="pmonogram">M</span>
                         <span class="url-tag">maison.ecomkix.com</span>
                     </a>
@@ -338,13 +346,13 @@
                             dashboard, and third-party API integrations.</p>
                         <div class="ptags"><span class="ptag">Frontend</span><span class="ptag">API</span><span
                                 class="ptag">Backend</span></div>
-                        <a href="https://maison.ecomkix.com/" target="_blank" class="plink">View project <i
+                        <a href="https://maison.ecomkix.com/" target="_blank" rel="noopener noreferrer" class="plink">View project <i
                                 class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <div class="pcard">
-                    <a href="https://ironclad.ecomkix.com/" target="_blank" class="pthumb">
+                    <a href="https://ironclad.ecomkix.com/" target="_blank" rel="noopener noreferrer" class="pthumb">
                         <span class="pmonogram">I</span>
                         <span class="url-tag">ironclad.ecomkix.com</span>
                     </a>
@@ -353,13 +361,13 @@
                         <p>Modern roofing services website built with React and Vite. Responsive design, quote form, and
                             a professional UI.</p>
                         <div class="ptags"><span class="ptag">React</span><span class="ptag">Vite</span></div>
-                        <a href="https://ironclad.ecomkix.com/" target="_blank" class="plink">View project <i
+                        <a href="https://ironclad.ecomkix.com/" target="_blank" rel="noopener noreferrer" class="plink">View project <i
                                 class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <div class="pcard">
-                    <a href="https://salman-ahmadd.myshopify.com/" target="_blank" class="pthumb">
+                    <a href="https://salman-ahmadd.myshopify.com/" target="_blank" rel="noopener noreferrer" class="pthumb">
                         <span class="pmonogram">H</span>
                         <span class="url-tag">salman-ahmadd.myshopify.com</span>
                     </a>
@@ -367,13 +375,13 @@
                         <h3>Hardware Systems</h3>
                         <p>Converted a Figma design into a fully responsive Shopify theme using Liquid templating.</p>
                         <div class="ptags"><span class="ptag">Shopify</span><span class="ptag">Liquid</span></div>
-                        <a href="https://salman-ahmadd.myshopify.com/" target="_blank" class="plink">View project <i
+                        <a href="https://salman-ahmadd.myshopify.com/" target="_blank" rel="noopener noreferrer" class="plink">View project <i
                                 class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <div class="pcard">
-                    <a href="https://salmanahmad-web.github.io/Maple-Bean/" target="_blank" class="pthumb">
+                    <a href="https://salmanahmad-web.github.io/Maple-Bean/" target="_blank" rel="noopener noreferrer" class="pthumb">
                         <span class="pmonogram">MB</span>
                         <span class="url-tag">Maple-Bean</span>
                     </a>
@@ -383,7 +391,7 @@
                             functionality.</p>
                         <div class="ptags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span
                                 class="ptag">JS</span></div>
-                        <a href="https://salmanahmad-web.github.io/Maple-Bean/" class="plink" target="_blank">View
+                        <a href="https://salmanahmad-web.github.io/Maple-Bean/" class="plink" target="_blank" rel="noopener noreferrer">View
                             project <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -442,8 +450,8 @@
                     <h2>Let's build something.</h2>
                     <p class="lead">Have a project in mind? I'm currently taking on new freelance and full-time work.
                     </p>
-                    <a href="https://mail.google.com/mail/?view=cm&to=salman.ahma553@gmail.com&su=Project Inquiry&body=Hi Salman, I would like to discuss a project with you."
-                        target="_blank" class="btn btn--ghost-dark">Email me <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="mailto:salman.ahma553@gmail.com?subject=Project%20Inquiry&body=Hi%20Salman%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20you."
+                        class="btn btn--ghost-dark">Email me <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="cinfo">
                     <div class="cinfo-row"><i class="fa-solid fa-location-dot"></i>
@@ -455,13 +463,13 @@
                     <div class="cinfo-row"><i class="fa-solid fa-envelope"></i>
                         <div>
                             <p>Email</p>
-                            <p>salman.ahma553@gmail.com</p>
+                            <p><a href="mailto:salman.ahma553@gmail.com">salman.ahma553@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="cinfo-row"><i class="fa-solid fa-phone"></i>
                         <div>
                             <p>Phone</p>
-                            <p>+92 306 7388012</p>
+                            <p><a href="tel:+923067388012">+92 306 7388012</a></p>
                         </div>
                     </div>
                 </div>
@@ -482,13 +490,13 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="socials">
-                <a href="https://www.linkedin.com/in/salman-ahmad-989951346" target="_blank" aria-label="LinkedIn"><i
+                <a href="https://www.linkedin.com/in/salman-ahmad-989951346" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
                         class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://github.com/SalmanAhmad-arch" target="_blank" aria-label="GitHub"><i
+                <a href="https://github.com/salmanahmad-web" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
                         class="fa-brands fa-github"></i></a>
-                <a href="https://www.facebook.com/share/1CG95E5Szq/" target="_blank" aria-label="Facebook"><i
+                <a href="https://www.facebook.com/share/1CG95E5Szq/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
                         class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/salmanahmad691" target="_blank" aria-label="Instagram"><i
+                <a href="https://www.instagram.com/salmanahmad691" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
                         class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
